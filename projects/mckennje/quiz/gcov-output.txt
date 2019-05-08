@@ -1,0 +1,4 @@
+File 'testme.c'
+Lines executed:97.30% of 37
+Creating 'testme.c.gcov'
+
