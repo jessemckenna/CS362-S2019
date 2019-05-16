@@ -1,47 +1,60 @@
 // Name: randomtestcard2.c
-// Description: TODO
+// Description: Random-test generator for Smithy card implementation in
+// dominion.c.
 // Author: Jesse McKenna
 // Date: 5/19/2019
 
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include "unittest_helpers.h"
+#include "randomtest_helpers.h"
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define TESTCARDNAME "Smithy"
 #define TESTCARD smithy
+#define NUM_TEST_RUNS 100
 
-void TestTemplate(int* didTestPass);
+int TestRandomized();
 
 int main() {
-  PrintCardTestHeader(TESTCARDNAME);
-  int didTestPass = TRUE;
+  srand(time(NULL));
+
+  PrintRandomTestHeader(NUM_TEST_RUNS, TESTCARDNAME);
+  int didAllTestsPass = TRUE;
 
   // Run random tests.
+  int didTestPass;
+  for (int i = 0; i < NUM_TEST_RUNS; i++) {
+    didTestPass = TestRandomized();
+    didAllTestsPass = didAllTestsPass && didTestPass;
+  }
 
-  if (didTestPass) {
+  if (didAllTestsPass) {
     PrintSuccess();
   }
   return 0;
 }
 
-void TestTemplate(int* didTestPass) {
-  printf("TestTemplate\n");
+int TestRandomized() {
+  int didTestPass = TRUE;
 
-  struct gameState initialState = GetInitialState();
-  struct gameState state = initialState;
+  // Randomize game state.
+  struct gameState initialState = GetRandomInitialState();
+  struct gameInputs inputs = InitializeGameInputs(&initialState, TESTCARD);
+  const int currentPlayer = whoseTurn(&initialState);
 
   // Set expectations for card counts after call to cardEffect().
-  const int cardsAdded = 2;
   const int cardsPlayed = 1;
-  const int coinsAdded = 0;
+  const int cardsAdded = 3;
+  const int cardsShuffled = initialState.deckCount[currentPlayer] < 3 ?
+                                initialState.discardCount[currentPlayer] :
+                                0;
 
   // Run dominion code, saving results in |state|.
-  struct gameInputs inputs = InitializeGameInputs(initialState, TESTCARD);
-  inputs.choice1 = 1;
+  struct gameState state = initialState;
   cardEffect(TESTCARD,
              inputs.choice1,
              inputs.choice2,
@@ -51,15 +64,31 @@ void TestTemplate(int* didTestPass) {
              &inputs.bonus);
 
   // Check expectations against actual results.
-  const int currentPlayer = whoseTurn(&initialState);
-  AssertEquals(
-      "Hand count",
-      state.handCount[currentPlayer],
-      initialState.handCount[currentPlayer] +
-          cardsAdded -
-          cardsPlayed);
-  AssertEquals("Deck count",
-               state.deckCount[currentPlayer],
-               initialState.deckCount[currentPlayer] - cardsAdded);
-  AssertEquals("Coins", state.coins, initialState.coins + coinsAdded);
+  ExpectEquals("Hand count",
+               state.handCount[currentPlayer],
+               initialState.handCount[currentPlayer] + cardsAdded - cardsPlayed,
+               &didTestPass);
+  ExpectEquals("Played cards count",
+               state.playedCardCount,
+               initialState.playedCardCount + cardsPlayed,
+               &didTestPass);
+  ExpectEquals(
+      "Deck count",
+      state.deckCount[currentPlayer],
+      initialState.deckCount[currentPlayer] - cardsAdded + cardsShuffled,
+      &didTestPass);
+  ExpectEquals("Discard count",
+               state.discardCount[currentPlayer],
+               initialState.discardCount[currentPlayer] - cardsShuffled,
+               &didTestPass);
+  ExpectCoinsUnchanged(state, initialState, &didTestPass);
+  ExpectOtherPlayersUnchanged(state, initialState, currentPlayer, &didTestPass);
+  ExpectVictoryPileUnchanged(state, initialState, &didTestPass);
+  ExpectTreasurePileUnchanged(state, initialState, &didTestPass);
+  ExpectKingdomPileUnchanged(state, initialState, &didTestPass);
+
+  if (!didTestPass) {
+    PrintTestInformation(initialState);
+  }
+  return didTestPass;
 }

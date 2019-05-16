@@ -1,51 +1,100 @@
-// Name: unitttest_helpers.c
-// Description: Helper functions to be used in unittest1-4.c and cardtest1-4.c.
+// Name: randomtest_helpers.c
+// Description: Helper functions to be used in randomtest*.c.
 // Author: Jesse McKenna
-// Date: 5/5/2019
+// Date: 5/19/2019
 
-#include "unittest_helpers.h"
+#include "dominion_helpers.h"
+#include "randomtest_helpers.h"
+#include <stdlib.h>
 
-// --- Test setup ---
-struct gameState GetInitialState() {
-  struct gameState initialState;
-  int kingdomCards[10] = {adventurer, embargo, village, feast, mine,
-                          treasure_map, sea_hag, tribute, smithy, council_room};
-  initializeGame(2, kingdomCards, 1000, &initialState);
-  return initialState;
+// --- Randomization ---
+int GetRandomBetween(int min, int max) {
+  // Return a random number in range [min, max].
+  return min + (rand() % (max + 1 - min));
 }
 
-struct gameInputs InitializeGameInputs(struct gameState state, int card) {
+void FillWithRandomCards(int* array, int size) {
+  for (int i = 0; i < size; i++) {
+    array[i] = GetRandomBetween(curse, treasure_map);
+  }
+}
+
+void RandomizeHandDeckAndDiscard(struct gameState* state, int player) {
+  // To ensure no array overflow, limit the size of the deck, discard, and hand
+  // to |MAX_DECK| / 3 (in case hand is emptied into discard, then discard is
+  // shuffled into deck).
+  const int maxSize = MAX_DECK / 3;
+
+  // Randomize deck count and contents.
+  const int newDeckCount = GetRandomBetween(0, maxSize);
+  state->deckCount[player] = newDeckCount;
+  FillWithRandomCards(state->deck[player], newDeckCount);
+
+  // Randomize discard count and contents.
+  const int newDiscardCount = GetRandomBetween(0, maxSize);
+  state->discardCount[player] = newDiscardCount;
+  FillWithRandomCards(state->discard[player], newDiscardCount);
+
+  // Randomize hand count and contents.
+  const int newHandCount = GetRandomBetween(1, maxSize);
+  state->handCount[player] = newHandCount;
+  FillWithRandomCards(state->hand[player], newHandCount);
+}
+
+void RandomizePlayedCards(struct gameState* state) {
+  const int playedCardCount = GetRandomBetween(0, MAX_DECK / 2);
+  state->playedCardCount = playedCardCount;
+  FillWithRandomCards(state->playedCards, playedCardCount);
+}
+
+// --- Test setup ---
+struct gameState GetRandomInitialState() {
+  struct gameState state;
+
+  // Randomize kingdom cards, ensuring no duplicates.
+  int kingdomCards[10];
+  int isDuplicate[10] = {};
+  int card;
+  for (int i = 0; i < 10; i++) {
+    do {
+      card = GetRandomBetween(adventurer, treasure_map);
+    } while (isDuplicate[card]);
+
+    kingdomCards[i] = card;
+  }
+
+  // Randomize number of players.
+  int numPlayers = GetRandomBetween(2, MAX_PLAYERS);
+
+  // Call initializeGame() to get default starting state.
+  int seed = rand(); // random number in range [0, RAND_MAX]
+  initializeGame(numPlayers, kingdomCards, seed, &state);
+
+  // Randomize hands, decks, discard piles, played pile, and current player.
+  for (int i = 0; i < numPlayers; i++) {
+    RandomizeHandDeckAndDiscard(&state, i);
+  }
+  RandomizePlayedCards(&state);
+  const int player = GetRandomBetween(0, numPlayers - 1);
+  state.whoseTurn = player;
+  updateCoins(player, &state, 0);
+
+  return state;
+}
+
+struct gameInputs InitializeGameInputs(struct gameState* state, int card) {
   struct gameInputs inputs;
   inputs.choice1 = 0;
   inputs.choice2 = 0;
   inputs.choice3 = 0;
   inputs.bonus = 0;
 
-  const int currentPlayer = whoseTurn(&state);
+  const int currentPlayer = whoseTurn(state);
   inputs.handPos = 0;
-  state.hand[currentPlayer][inputs.handPos] = card; // ensure |card| is present
+  state->hand[currentPlayer][inputs.handPos] = card; // ensure |card| present
+  updateCoins(currentPlayer, state, 0); // in case a coin was just overwritten
 
   return inputs;
-}
-
-void EmptyHandToDiscard(struct gameState* state, int player) {
-  const int handCount = state->handCount[player];
-  for (int i = 0; i < handCount; i++) {
-    state->discard[player][i] = state->hand[player][i];
-    state->hand[player][i] = -1;
-  }
-  state->discardCount[player] = handCount;
-  state->handCount[player] = 0;
-}
-
-void EmptyDeckToDiscard(struct gameState* state, int player) {
-  const int deckCount = state->deckCount[player];
-  for (int i = 0; i < deckCount; i++) {
-    state->discard[player][i] = state->deck[player][i];
-    state->deck[player][i] = -1;
-  }
-  state->discardCount[player] = deckCount;
-  state->deckCount[player] = 0;
 }
 
 int GetValueFromTreasure(int treasureCard) {
@@ -75,15 +124,6 @@ void ExpectTrue(char* statementDescription,
   }
 }
 
-void AssertTrue(char* statementDescription,
-                int assertedStatement) {
-  int didTestPass = TRUE;
-  ExpectTrue(statementDescription, assertedStatement, &didTestPass);
-  if (!didTestPass) {
-    exit(0);
-  }
-}
-
 void ExpectEquals(char* valueDescription,
                   int value,
                   int expectedValue,
@@ -91,86 +131,29 @@ void ExpectEquals(char* valueDescription,
   if (value != expectedValue) {
     printf("ヽ(°ロ°)ﾉ ASSERT FAILED: %s expected %d, actual %d\n",
            valueDescription, expectedValue, value);
-    *didTestPass = FALSE;  }
-}
-
-void AssertEquals(char* valueDescription, int value, int expectedValue) {
-  int didTestPass = TRUE;
-  ExpectEquals(valueDescription, value, expectedValue, &didTestPass);
-  if (!didTestPass) {
-    exit(0);
-  }
-}
-
-void ExpectHandCountUnchanged(struct gameState state,
-                              struct gameState initialState,
-                              int currentPlayer,
-                              int* didTestPass) {
-  ExpectEquals("Hand count",
-               state.handCount[currentPlayer],
-               initialState.handCount[currentPlayer],
-               didTestPass);
-}
-
-void ExpectDeckCountUnchanged(struct gameState state,
-                              struct gameState initialState,
-                              int currentPlayer,
-                              int* didTestPass) {
-  ExpectEquals("Deck count",
-               state.deckCount[currentPlayer],
-               initialState.deckCount[currentPlayer],
-               didTestPass);
-}
-
-void ExpectDeckUnchanged(struct gameState state,
-                         struct gameState initialState,
-                         int currentPlayer,
-                         int* didTestPass) {
-  int isDeckCountUnchanged = TRUE;
-  ExpectDeckCountUnchanged(
-      state, initialState, currentPlayer, &isDeckCountUnchanged);
-  if (!isDeckCountUnchanged) {
     *didTestPass = FALSE;
-    return;
-  }
-
-  const int deckCount = state.deckCount[currentPlayer];
-  for (int i = 0; i < deckCount; i++) {
-    ExpectEquals("Card in deck",
-                 state.deck[currentPlayer][i],
-                 initialState.deck[currentPlayer][i],
-                 didTestPass);
   }
 }
 
-void ExpectDiscardCountUnchanged(struct gameState state,
-                                 struct gameState initialState,
-                                 int currentPlayer,
-                                 int* didTestPass) {
-  ExpectEquals("Discard count",
-               state.discardCount[currentPlayer],
-               initialState.discardCount[currentPlayer],
-               didTestPass);
-}
-
-void ExpectDiscardUnchanged(struct gameState state,
-                            struct gameState initialState,
-                            int currentPlayer,
-                            int* didTestPass) {
-  int isDiscardCountUnchanged = TRUE;
-  ExpectDiscardCountUnchanged(
-      state, initialState, currentPlayer, &isDiscardCountUnchanged);
-  if (!isDiscardCountUnchanged) {
+void ExpectGreaterThanOrEqualTo(char* valueDescription,
+                                int value,
+                                int expectedLowerValue,
+                                int* didTestPass) {
+  if (value < expectedLowerValue) {
+    printf("ヽ(°ロ°)ﾉ ASSERT FAILED: %s expected >= %d, actual %d\n",
+           valueDescription, expectedLowerValue, value);
     *didTestPass = FALSE;
-    return;
   }
+}
 
-  const int discardCount = state.discardCount[currentPlayer];
-  for (int i = 0; i < discardCount; i++) {
-    ExpectEquals("Card in discard",
-                 state.discard[currentPlayer][i],
-                 initialState.discard[currentPlayer][i],
-                 didTestPass);
+void ExpectLessThanOrEqualTo(char* valueDescription,
+                             int value,
+                             int expectedHigherValue,
+                             int* didTestPass) {
+  if (value > expectedHigherValue) {
+    printf("ヽ(°ロ°)ﾉ ASSERT FAILED: %s expected <= %d, actual %d\n",
+           valueDescription, expectedHigherValue, value);
+    *didTestPass = FALSE;
   }
 }
 
@@ -284,14 +267,21 @@ void ExpectPlayedPileUnchanged(struct gameState state,
 }
 
 // --- Output messages ---
-void PrintCardTestHeader(char* testCard) {
-  printf("Testing card: %s\n", testCard);
-}
-
-void PrintFunctionTestHeader(char* testFunction) {
-  printf("Testing function: %s\n", testFunction);
+void PrintRandomTestHeader(int numTestRuns, char* testCard) {
+  printf("Running %d tests of card: %s\n", numTestRuns, testCard);
 }
 
 void PrintSuccess() {
   printf("ヽ(・∀・)ﾉ ALL TESTS PASSED\n");
+}
+
+void PrintTestInformation(struct gameState state) {
+  printf("   numPlayers: %d\n", state.numPlayers);
+  for (int i = 0; i < state.numPlayers; i++) {
+    printf("      player %d: handCount %d, deckCount %d, discardCount %d\n",
+           i, state.handCount[i], state.deckCount[i], state.discardCount[i]);
+  }
+  printf("   playedCardCount %d\n", state.playedCardCount);
+  printf("   current player: %d\n", state.whoseTurn);
+  printf("   coins: %d\n", state.coins);
 }
