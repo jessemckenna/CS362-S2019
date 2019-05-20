@@ -20,29 +20,24 @@ void FillWithRandomCards(int* array, int size) {
 }
 
 void RandomizeHandDeckAndDiscard(struct gameState* state, int player) {
-  // To ensure no array overflow, limit the size of the deck, discard, and hand
-  // to |MAX_DECK| / 3 (in case hand is emptied into discard, then discard is
-  // shuffled into deck).
-  const int maxSize = MAX_DECK / 3;
-
   // Randomize deck count and contents.
-  const int newDeckCount = GetRandomBetween(0, maxSize);
+  const int newDeckCount = GetRandomBetween(0, MAX_DECK);
   state->deckCount[player] = newDeckCount;
   FillWithRandomCards(state->deck[player], newDeckCount);
 
   // Randomize discard count and contents.
-  const int newDiscardCount = GetRandomBetween(0, maxSize);
+  const int newDiscardCount = GetRandomBetween(0, MAX_DECK);
   state->discardCount[player] = newDiscardCount;
   FillWithRandomCards(state->discard[player], newDiscardCount);
 
   // Randomize hand count and contents.
-  const int newHandCount = GetRandomBetween(1, maxSize);
+  const int newHandCount = GetRandomBetween(1, MAX_HAND);
   state->handCount[player] = newHandCount;
   FillWithRandomCards(state->hand[player], newHandCount);
 }
 
 void RandomizePlayedCards(struct gameState* state) {
-  const int playedCardCount = GetRandomBetween(0, MAX_DECK / 2);
+  const int playedCardCount = GetRandomBetween(0, MAX_DECK);
   state->playedCardCount = playedCardCount;
   FillWithRandomCards(state->playedCards, playedCardCount);
 }
