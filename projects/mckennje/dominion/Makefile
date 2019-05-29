@@ -81,6 +81,30 @@ unittestresults: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c car
 	echo "gcov dominion.c:" >> unittestresults.out
 	gcov dominion.c -b -f >> unittestresults.out
 
+randomtest_helpers.o: randomtest_helpers.h randomtest_helpers.c dominion.o
+	gcc -c randomtest_helpers.c -g $(CFLAGS)
+
+randomtestresults: randomtestadventurer.c randomtestcard1.c randomtestcard2.c dominion.o rngs.o randomtest_helpers.o
+	echo "Result for running Dominion tests:" > randomtestresults.out
+	
+	echo "randomtestadventurer.c:" >> randomtestresults.out
+	gcc -o randomtestadventurer randomtestadventurer.c randomtest_helpers.o dominion.o rngs.o -g -Wall -fpic -coverage -lm -std=c99
+	./randomtestadventurer >> randomtestresults.out
+	echo >> randomtestresults.out
+	
+	echo "randomtestcard1.c:" >> randomtestresults.out
+	gcc -o randomtestcard1 randomtestcard1.c randomtest_helpers.o dominion.o rngs.o -g -Wall -fpic -coverage -lm -std=c99
+	./randomtestcard1 >> randomtestresults.out
+	echo >> randomtestresults.out
+	
+	echo "randomtestcard2.c:" >> randomtestresults.out
+	gcc -o randomtestcard2 randomtestcard2.c randomtest_helpers.o dominion.o rngs.o -g -Wall -fpic -coverage -lm -std=c99
+	./randomtestcard2 >> randomtestresults.out
+	echo >> randomtestresults.out
+	
+	echo "gcov dominion.c:" >> randomtestresults.out
+	gcov dominion.c -b -f >> randomtestresults.out
+
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
