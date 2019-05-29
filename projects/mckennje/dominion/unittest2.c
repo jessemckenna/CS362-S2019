@@ -80,7 +80,13 @@ void TestNoCurseCardsLeft(int* didTestPass) {
   const int cardsDiscarded = 1;
 
   // Run dominion code, saving results in |state|.
-  seaHagCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   const int currentPlayer = whoseTurn(&initialState);
   ExpectEquals("Hand count",
@@ -138,7 +144,13 @@ void TestOtherPlayerDeckIsEmpty(int* didTestPass) {
   const int cardsShuffled = state.discardCount[playerWithEmptyDeck];
 
   // Run dominion code, saving results in |state|.
-  seaHagCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   ExpectEquals("Hand count",
                state.handCount[currentPlayer],

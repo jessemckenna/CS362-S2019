@@ -1,0 +1,2322 @@
+Result for running Dominion tests:
+cardtest1.c:
+Testing card: Steward
+TestDrawTwoCards
+TestGainTwoCoins
+TestTrashTwoCards
+TestTrashTwoCardsWhenHandIsEmpty
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 0, actual -3
+TestTrashOneCard
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 0, actual -6
+
+cardtest2.c:
+Testing card: Village
+TestDrawCardGainTwoActions
+ヽ(・∀・)ﾉ ALL TESTS PASSED
+
+cardtest3.c:
+Testing card: Smithy
+TestThreeCardsAddedWhenDeckIsEmpty
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 7, actual 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 2, actual 3
+
+cardtest4.c:
+Testing card: Adventurer
+FindTwoTreasures
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 6, actual 8
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 6, actual 4
+FindOneTreasure
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 5, actual 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 5, actual 4
+FindNoTreasures
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 4, actual 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+
+randomtestadventurer.c:
+Running 100 tests of card: Adventurer
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 322, actual 324
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 26, actual 25
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 157, actual 155
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 297, actual 298
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 69, actual 65
+   numPlayers: 3
+      player 0: handCount 321, deckCount 178, discardCount 278
+      player 1: handCount 411, deckCount 299, discardCount 249
+      player 2: handCount 65, deckCount 181, discardCount 439
+   playedCardCount 25
+   current player: 0
+   coins: 65
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 417, actual 419
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 376, actual 358
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 164, actual 181
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 107, actual 104
+   numPlayers: 4
+      player 0: handCount 416, deckCount 415, discardCount 127
+      player 1: handCount 310, deckCount 401, discardCount 259
+      player 2: handCount 443, deckCount 326, discardCount 254
+      player 3: handCount 485, deckCount 167, discardCount 490
+   playedCardCount 0
+   current player: 0
+   coins: 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 401, actual 403
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 74, actual 73
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 216, actual 202
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 290, actual 303
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 84, actual 80
+   numPlayers: 4
+      player 0: handCount 425, deckCount 200, discardCount 423
+      player 1: handCount 26, deckCount 43, discardCount 382
+      player 2: handCount 400, deckCount 222, discardCount 286
+      player 3: handCount 243, deckCount 264, discardCount 16
+   playedCardCount 73
+   current player: 2
+   coins: 80
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 313, actual 315
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 496, actual 495
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 435, actual 431
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 364, actual 367
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 72, actual 68
+   numPlayers: 2
+      player 0: handCount 312, deckCount 468, discardCount 333
+      player 1: handCount 217, deckCount 216, discardCount 301
+   playedCardCount 495
+   current player: 0
+   coins: 68
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 350, actual 352
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 187, actual 186
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 38, actual 35
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 179, actual 181
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 86, actual 83
+   numPlayers: 2
+      player 0: handCount 349, deckCount 65, discardCount 154
+      player 1: handCount 373, deckCount 315, discardCount 270
+   playedCardCount 186
+   current player: 0
+   coins: 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 156, actual 158
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 406, actual 405
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 409, actual 400
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 296, actual 304
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 34, actual 30
+   numPlayers: 4
+      player 0: handCount 231, deckCount 318, discardCount 200
+      player 1: handCount 155, deckCount 423, discardCount 284
+      player 2: handCount 108, deckCount 484, discardCount 333
+      player 3: handCount 122, deckCount 274, discardCount 226
+   playedCardCount 405
+   current player: 1
+   coins: 30
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 68, actual 70
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 180, actual 179
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 461, actual 453
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 405, actual 412
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 21, actual 18
+   numPlayers: 2
+      player 0: handCount 281, deckCount 114, discardCount 56
+      player 1: handCount 67, deckCount 482, discardCount 386
+   playedCardCount 179
+   current player: 1
+   coins: 18
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 444, actual 446
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 167, actual 166
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 357, actual 353
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 417, actual 420
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 102, actual 97
+   numPlayers: 3
+      player 0: handCount 402, deckCount 29, discardCount 112
+      player 1: handCount 443, deckCount 372, discardCount 404
+      player 2: handCount 441, deckCount 356, discardCount 253
+   playedCardCount 166
+   current player: 1
+   coins: 97
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 459, actual 461
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 196, actual 195
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 316, actual 310
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 459, actual 464
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 95, actual 91
+   numPlayers: 4
+      player 0: handCount 420, deckCount 236, discardCount 263
+      player 1: handCount 458, deckCount 323, discardCount 454
+      player 2: handCount 326, deckCount 291, discardCount 17
+      player 3: handCount 352, deckCount 260, discardCount 430
+   playedCardCount 195
+   current player: 1
+   coins: 91
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 59, actual 61
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 23, actual 22
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 120, actual 114
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 386, actual 391
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 15, actual 12
+   numPlayers: 3
+      player 0: handCount 58, deckCount 129, discardCount 379
+      player 1: handCount 442, deckCount 482, discardCount 228
+      player 2: handCount 199, deckCount 32, discardCount 138
+   playedCardCount 22
+   current player: 0
+   coins: 12
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 40, actual 42
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 59, actual 58
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 161, actual 157
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 369, actual 372
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 17, actual 12
+   numPlayers: 4
+      player 0: handCount 39, deckCount 171, discardCount 361
+      player 1: handCount 475, deckCount 85, discardCount 104
+      player 2: handCount 359, deckCount 93, discardCount 375
+      player 3: handCount 22, deckCount 67, discardCount 278
+   playedCardCount 58
+   current player: 0
+   coins: 12
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 267, actual 269
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 2, actual 1
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 248, actual 227
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 260, actual 280
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 73, actual 67
+   numPlayers: 3
+      player 0: handCount 22, deckCount 39, discardCount 343
+      player 1: handCount 266, deckCount 266, discardCount 244
+      player 2: handCount 415, deckCount 324, discardCount 14
+   playedCardCount 1
+   current player: 1
+   coins: 67
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 412, actual 414
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 396, actual 395
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 192, actual 191
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 77, actual 73
+   numPlayers: 4
+      player 0: handCount 411, deckCount 219, discardCount 284
+      player 1: handCount 99, deckCount 47, discardCount 362
+      player 2: handCount 296, deckCount 54, discardCount 58
+      player 3: handCount 215, deckCount 251, discardCount 33
+   playedCardCount 395
+   current player: 0
+   coins: 73
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 57, actual 59
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 189, actual 188
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 169, actual 159
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 469, actual 478
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 14, actual 10
+   numPlayers: 2
+      player 0: handCount 440, deckCount 465, discardCount 470
+      player 1: handCount 56, deckCount 198, discardCount 442
+   playedCardCount 188
+   current player: 1
+   coins: 10
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 430, actual 432
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 40, actual 39
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 155, actual 86
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 339, actual 407
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 108, actual 103
+   numPlayers: 4
+      player 0: handCount 211, deckCount 313, discardCount 365
+      player 1: handCount 54, deckCount 175, discardCount 467
+      player 2: handCount 500, deckCount 382, discardCount 218
+      player 3: handCount 429, deckCount 168, discardCount 328
+   playedCardCount 39
+   current player: 3
+   coins: 103
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 62, actual 64
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 133, actual 132
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 147, actual 126
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 427, actual 447
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 17, actual 12
+   numPlayers: 4
+      player 0: handCount 3, deckCount 470, discardCount 211
+      player 1: handCount 178, deckCount 371, discardCount 207
+      player 2: handCount 394, deckCount 339, discardCount 9
+      player 3: handCount 61, deckCount 181, discardCount 395
+   playedCardCount 132
+   current player: 3
+   coins: 12
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 68, actual 70
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 403, actual 402
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 80, actual 65
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 496, actual 510
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 29, actual 25
+   numPlayers: 4
+      player 0: handCount 67, deckCount 90, discardCount 488
+      player 1: handCount 376, deckCount 26, discardCount 124
+      player 2: handCount 125, deckCount 264, discardCount 124
+      player 3: handCount 290, deckCount 223, discardCount 85
+   playedCardCount 402
+   current player: 0
+   coins: 25
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 178, actual 180
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 155, actual 154
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 82, actual 73
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 114, actual 122
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 49, actual 46
+   numPlayers: 3
+      player 0: handCount 224, deckCount 36, discardCount 127
+      player 1: handCount 67, deckCount 102, discardCount 302
+      player 2: handCount 177, deckCount 85, discardCount 113
+   playedCardCount 154
+   current player: 2
+   coins: 46
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 287, actual 289
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 351, actual 350
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 224, actual 219
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 392, actual 396
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 55, actual 51
+   numPlayers: 2
+      player 0: handCount 286, deckCount 240, discardCount 378
+      player 1: handCount 475, deckCount 27, discardCount 294
+   playedCardCount 350
+   current player: 0
+   coins: 51
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 386, actual 388
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 442, actual 441
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 241, actual 240
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 94, actual 90
+   numPlayers: 4
+      player 0: handCount 385, deckCount 244, discardCount 451
+      player 1: handCount 344, deckCount 454, discardCount 319
+      player 2: handCount 176, deckCount 489, discardCount 322
+      player 3: handCount 82, deckCount 418, discardCount 67
+   playedCardCount 441
+   current player: 0
+   coins: 90
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 439, actual 441
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 84, actual 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 96, actual 88
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 238, actual 245
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 88, actual 84
+   numPlayers: 2
+      player 0: handCount 62, deckCount 71, discardCount 70
+      player 1: handCount 438, deckCount 109, discardCount 227
+   playedCardCount 83
+   current player: 1
+   coins: 84
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 419, actual 421
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 322, actual 321
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 124, actual 120
+   numPlayers: 3
+      player 0: handCount 137, deckCount 259, discardCount 276
+      player 1: handCount 191, deckCount 393, discardCount 281
+      player 2: handCount 418, deckCount 11, discardCount 442
+   playedCardCount 321
+   current player: 2
+   coins: 120
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 270, actual 272
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 91, actual 90
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 99, actual 89
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 95, actual 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 41, actual 36
+   numPlayers: 2
+      player 0: handCount 269, deckCount 104, discardCount 92
+      player 1: handCount 28, deckCount 69, discardCount 290
+   playedCardCount 90
+   current player: 0
+   coins: 36
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 412, actual 414
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 455, actual 454
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 199, actual 190
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 161, actual 169
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 121, actual 118
+   numPlayers: 3
+      player 0: handCount 411, deckCount 226, discardCount 136
+      player 1: handCount 472, deckCount 158, discardCount 102
+      player 2: handCount 113, deckCount 19, discardCount 232
+   playedCardCount 454
+   current player: 0
+   coins: 118
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 101, actual 103
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 278, actual 277
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 245, actual 241
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 417, actual 420
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 16, actual 14
+   numPlayers: 2
+      player 0: handCount 67, deckCount 419, discardCount 210
+      player 1: handCount 100, deckCount 265, discardCount 399
+   playedCardCount 277
+   current player: 1
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 317, actual 319
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 169, actual 168
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 299, actual 292
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 91, actual 97
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 80, actual 77
+   numPlayers: 2
+      player 0: handCount 426, deckCount 284, discardCount 34
+      player 1: handCount 316, deckCount 310, discardCount 82
+   playedCardCount 168
+   current player: 1
+   coins: 77
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 41, actual 43
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 54, actual 53
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 5, actual 344
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 357, actual 17
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 13, actual 10
+   numPlayers: 4
+      player 0: handCount 500, deckCount 121, discardCount 307
+      player 1: handCount 288, deckCount 248, discardCount 61
+      player 2: handCount 496, deckCount 105, discardCount 453
+      player 3: handCount 40, deckCount 17, discardCount 347
+   playedCardCount 53
+   current player: 3
+   coins: 10
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 433, actual 435
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 7, actual 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 31, actual 26
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 469, actual 473
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 96, actual 92
+   numPlayers: 4
+      player 0: handCount 141, deckCount 297, discardCount 188
+      player 1: handCount 72, deckCount 440, discardCount 289
+      player 2: handCount 432, deckCount 47, discardCount 455
+      player 3: handCount 228, deckCount 259, discardCount 133
+   playedCardCount 6
+   current player: 2
+   coins: 92
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 275, actual 277
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 268, actual 267
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 260, actual 248
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 35, actual 46
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 80, actual 76
+   numPlayers: 4
+      player 0: handCount 268, deckCount 261, discardCount 343
+      player 1: handCount 274, deckCount 266, discardCount 31
+      player 2: handCount 320, deckCount 329, discardCount 300
+      player 3: handCount 333, deckCount 83, discardCount 351
+   playedCardCount 267
+   current player: 1
+   coins: 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 471, actual 473
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 332, actual 331
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 330, actual 314
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 344, actual 359
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 89, actual 84
+   numPlayers: 2
+      player 0: handCount 470, deckCount 342, discardCount 334
+      player 1: handCount 92, deckCount 289, discardCount 325
+   playedCardCount 331
+   current player: 0
+   coins: 84
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 137, actual 139
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 202, actual 201
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 177, actual 170
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 303, actual 309
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 40, actual 35
+   numPlayers: 4
+      player 0: handCount 328, deckCount 33, discardCount 476
+      player 1: handCount 347, deckCount 386, discardCount 359
+      player 2: handCount 136, deckCount 192, discardCount 290
+      player 3: handCount 492, deckCount 317, discardCount 213
+   playedCardCount 201
+   current player: 2
+   coins: 35
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 185, actual 187
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 210, actual 209
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 124, actual 118
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 126, actual 131
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 46, actual 44
+   numPlayers: 2
+      player 0: handCount 212, deckCount 29, discardCount 104
+      player 1: handCount 184, deckCount 134, discardCount 118
+   playedCardCount 209
+   current player: 1
+   coins: 44
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 302, actual 304
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 436, actual 435
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 81, actual 79
+   numPlayers: 3
+      player 0: handCount 301, deckCount 13, discardCount 162
+      player 1: handCount 392, deckCount 191, discardCount 67
+      player 2: handCount 146, deckCount 65, discardCount 469
+   playedCardCount 435
+   current player: 0
+   coins: 79
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 184, actual 186
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 264, actual 263
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 59, actual 57
+   numPlayers: 2
+      player 0: handCount 424, deckCount 178, discardCount 405
+      player 1: handCount 183, deckCount 16, discardCount 90
+   playedCardCount 263
+   current player: 1
+   coins: 57
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 494, actual 496
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 384, actual 383
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 46, actual 42
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 428, actual 431
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 116, actual 112
+   numPlayers: 3
+      player 0: handCount 84, deckCount 446, discardCount 62
+      player 1: handCount 245, deckCount 281, discardCount 129
+      player 2: handCount 493, deckCount 51, discardCount 425
+   playedCardCount 383
+   current player: 2
+   coins: 112
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 384, actual 386
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 319, actual 318
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 395, actual 389
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 381, actual 386
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 81, actual 75
+   numPlayers: 2
+      player 0: handCount 237, deckCount 291, discardCount 427
+      player 1: handCount 383, deckCount 418, discardCount 360
+   playedCardCount 318
+   current player: 1
+   coins: 75
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 65, actual 67
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 258, actual 257
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 30, actual 23
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 242, actual 248
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 18, actual 14
+   numPlayers: 2
+      player 0: handCount 326, deckCount 251, discardCount 217
+      player 1: handCount 64, deckCount 34, discardCount 240
+   playedCardCount 257
+   current player: 1
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 438, actual 440
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 265, actual 264
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 19, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 412, actual 430
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 113, actual 109
+   numPlayers: 3
+      player 0: handCount 442, deckCount 374, discardCount 490
+      player 1: handCount 437, deckCount 30, discardCount 403
+      player 2: handCount 223, deckCount 428, discardCount 77
+   playedCardCount 264
+   current player: 1
+   coins: 109
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 125, actual 127
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 163, actual 162
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 31, actual 17
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 345, actual 358
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 31, actual 27
+   numPlayers: 4
+      player 0: handCount 491, deckCount 42, discardCount 282
+      player 1: handCount 485, deckCount 58, discardCount 7
+      player 2: handCount 25, deckCount 75, discardCount 66
+      player 3: handCount 124, deckCount 44, discardCount 334
+   playedCardCount 162
+   current player: 3
+   coins: 27
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 435, actual 437
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 178, actual 177
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 327, actual 324
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 429, actual 431
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 93, actual 91
+   numPlayers: 2
+      player 0: handCount 148, deckCount 55, discardCount 435
+      player 1: handCount 434, deckCount 332, discardCount 426
+   playedCardCount 177
+   current player: 1
+   coins: 91
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 81, actual 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 96, actual 95
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 192, actual 176
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 236, actual 251
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 28, actual 25
+   numPlayers: 2
+      player 0: handCount 80, deckCount 212, discardCount 218
+      player 1: handCount 440, deckCount 25, discardCount 263
+   playedCardCount 95
+   current player: 0
+   coins: 25
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 351, actual 353
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 46, actual 45
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 78, actual 76
+   numPlayers: 4
+      player 0: handCount 98, deckCount 426, discardCount 106
+      player 1: handCount 350, deckCount 9, discardCount 58
+      player 2: handCount 222, deckCount 478, discardCount 245
+      player 3: handCount 269, deckCount 297, discardCount 204
+   playedCardCount 45
+   current player: 1
+   coins: 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 24, actual 26
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 177, actual 176
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 449, actual 444
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 223, actual 227
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 12, actual 7
+   numPlayers: 2
+      player 0: handCount 120, deckCount 455, discardCount 14
+      player 1: handCount 23, deckCount 457, discardCount 217
+   playedCardCount 176
+   current player: 1
+   coins: 7
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 348, actual 350
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 235, actual 234
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 456, actual 454
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 14, actual 15
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 92, actual 88
+   numPlayers: 2
+      player 0: handCount 347, deckCount 461, discardCount 11
+      player 1: handCount 84, deckCount 376, discardCount 154
+   playedCardCount 234
+   current player: 0
+   coins: 88
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 85, actual 87
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 372, actual 371
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 172, actual 162
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 115, actual 124
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 28, actual 25
+   numPlayers: 3
+      player 0: handCount 442, deckCount 154, discardCount 331
+      player 1: handCount 461, deckCount 191, discardCount 412
+      player 2: handCount 84, deckCount 190, discardCount 99
+   playedCardCount 371
+   current player: 2
+   coins: 25
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 364, actual 366
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 171, actual 170
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 262, actual 261
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 81, actual 76
+   numPlayers: 3
+      player 0: handCount 363, deckCount 299, discardCount 432
+      player 1: handCount 364, deckCount 143, discardCount 380
+      player 2: handCount 477, deckCount 366, discardCount 305
+   playedCardCount 170
+   current player: 0
+   coins: 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 67, actual 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 132, actual 131
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 18, actual 14
+   numPlayers: 3
+      player 0: handCount 86, deckCount 414, discardCount 314
+      player 1: handCount 66, deckCount 39, discardCount 118
+      player 2: handCount 493, deckCount 246, discardCount 15
+   playedCardCount 131
+   current player: 1
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 328, actual 330
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 154, actual 153
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 341, actual 338
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 433, actual 435
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 73, actual 70
+   numPlayers: 3
+      player 0: handCount 47, deckCount 420, discardCount 373
+      player 1: handCount 23, deckCount 35, discardCount 27
+      player 2: handCount 327, deckCount 366, discardCount 410
+   playedCardCount 153
+   current player: 2
+   coins: 70
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 180, actual 182
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 223, actual 222
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 78, actual 77
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 47, actual 45
+   numPlayers: 4
+      player 0: handCount 117, deckCount 267, discardCount 42
+      player 1: handCount 113, deckCount 366, discardCount 148
+      player 2: handCount 179, deckCount 118, discardCount 241
+      player 3: handCount 272, deckCount 333, discardCount 58
+   playedCardCount 222
+   current player: 2
+   coins: 45
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 90, actual 92
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 250, actual 249
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 485, actual 483
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 259, actual 260
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 20, actual 15
+   numPlayers: 4
+      player 0: handCount 152, deckCount 162, discardCount 425
+      player 1: handCount 89, deckCount 500, discardCount 246
+      player 2: handCount 304, deckCount 206, discardCount 231
+      player 3: handCount 464, deckCount 244, discardCount 404
+   playedCardCount 249
+   current player: 1
+   coins: 15
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 274, actual 276
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 425, actual 424
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 294, actual 279
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 574, actual 588
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 44, actual 39
+   numPlayers: 4
+      player 0: handCount 273, deckCount 371, discardCount 499
+      player 1: handCount 369, deckCount 370, discardCount 385
+      player 2: handCount 411, deckCount 469, discardCount 104
+      player 3: handCount 185, deckCount 256, discardCount 334
+   playedCardCount 424
+   current player: 0
+   coins: 39
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 251, actual 253
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 448, actual 447
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 91, actual 81
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 411, actual 420
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 54, actual 52
+   numPlayers: 2
+      player 0: handCount 361, deckCount 137, discardCount 352
+      player 1: handCount 250, deckCount 160, discardCount 344
+   playedCardCount 447
+   current player: 1
+   coins: 52
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 366, actual 368
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 182, actual 181
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 198, actual 185
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 462, actual 474
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 107, actual 103
+   numPlayers: 3
+      player 0: handCount 365, deckCount 203, discardCount 459
+      player 1: handCount 240, deckCount 458, discardCount 71
+      player 2: handCount 421, deckCount 107, discardCount 211
+   playedCardCount 181
+   current player: 0
+   coins: 103
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 263, actual 265
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 210, actual 209
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 435, actual 428
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 351, actual 357
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 53, actual 51
+   numPlayers: 2
+      player 0: handCount 262, deckCount 448, discardCount 340
+      player 1: handCount 117, deckCount 321, discardCount 464
+   playedCardCount 209
+   current player: 0
+   coins: 51
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 376, actual 378
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 246, actual 245
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 334, actual 324
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 225, actual 234
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 85, actual 83
+   numPlayers: 4
+      player 0: handCount 171, deckCount 242, discardCount 337
+      player 1: handCount 375, deckCount 338, discardCount 223
+      player 2: handCount 90, deckCount 142, discardCount 171
+      player 3: handCount 225, deckCount 498, discardCount 185
+   playedCardCount 245
+   current player: 1
+   coins: 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 22, actual 24
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 418, actual 417
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 239, actual 228
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 196, actual 206
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 5, actual 1
+   numPlayers: 4
+      player 0: handCount 21, deckCount 245, discardCount 192
+      player 1: handCount 480, deckCount 291, discardCount 495
+      player 2: handCount 324, deckCount 10, discardCount 419
+      player 3: handCount 289, deckCount 463, discardCount 15
+   playedCardCount 417
+   current player: 0
+   coins: 1
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 360, actual 362
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 105, actual 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 5, actual 431
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 458, actual 31
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 80, actual 76
+   numPlayers: 3
+      player 0: handCount 359, deckCount 21, discardCount 444
+      player 1: handCount 275, deckCount 88, discardCount 178
+      player 2: handCount 408, deckCount 114, discardCount 189
+   playedCardCount 104
+   current player: 0
+   coins: 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 403, actual 405
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 140, actual 139
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 344, actual 340
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 307, actual 310
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 100, actual 95
+   numPlayers: 4
+      player 0: handCount 29, deckCount 120, discardCount 144
+      player 1: handCount 199, deckCount 299, discardCount 499
+      player 2: handCount 478, deckCount 243, discardCount 2
+      player 3: handCount 402, deckCount 377, discardCount 276
+   playedCardCount 139
+   current player: 3
+   coins: 95
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 222, actual 224
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 436, actual 435
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 128, actual 121
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 322, actual 328
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 68, actual 63
+   numPlayers: 4
+      player 0: handCount 216, deckCount 420, discardCount 371
+      player 1: handCount 221, deckCount 130, discardCount 322
+      player 2: handCount 362, deckCount 101, discardCount 358
+      player 3: handCount 182, deckCount 218, discardCount 265
+   playedCardCount 435
+   current player: 1
+   coins: 63
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 67, actual 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 83, actual 82
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 38, actual 37
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 16, actual 14
+   numPlayers: 3
+      player 0: handCount 192, deckCount 174, discardCount 172
+      player 1: handCount 66, deckCount 47, discardCount 88
+      player 2: handCount 93, deckCount 422, discardCount 482
+   playedCardCount 82
+   current player: 1
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 107, actual 109
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 30, actual 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 449, actual 437
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 494, actual 505
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 33, actual 29
+   numPlayers: 3
+      player 0: handCount 106, deckCount 474, discardCount 471
+      player 1: handCount 166, deckCount 384, discardCount 286
+      player 2: handCount 413, deckCount 305, discardCount 28
+   playedCardCount 29
+   current player: 0
+   coins: 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 216, actual 218
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 183, actual 182
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 423, actual 418
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 148, actual 152
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 57, actual 52
+   numPlayers: 2
+      player 0: handCount 43, deckCount 470, discardCount 286
+      player 1: handCount 215, deckCount 447, discardCount 126
+   playedCardCount 182
+   current player: 1
+   coins: 52
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 278, actual 280
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 251, actual 250
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 239, actual 227
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 383, actual 394
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 83, actual 78
+   numPlayers: 2
+      player 0: handCount 385, deckCount 434, discardCount 34
+      player 1: handCount 277, deckCount 246, discardCount 378
+   playedCardCount 250
+   current player: 1
+   coins: 78
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 493, actual 495
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 267, actual 266
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 124, actual 123
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 112, actual 107
+   numPlayers: 2
+      player 0: handCount 492, deckCount 163, discardCount 394
+      player 1: handCount 180, deckCount 177, discardCount 276
+   playedCardCount 266
+   current player: 0
+   coins: 107
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 137, actual 139
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 39, actual 38
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 472, actual 460
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 48, actual 59
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 46, actual 43
+   numPlayers: 2
+      player 0: handCount 162, deckCount 435, discardCount 89
+      player 1: handCount 136, deckCount 478, discardCount 44
+   playedCardCount 38
+   current player: 1
+   coins: 43
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 60, actual 62
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 256, actual 255
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 444, actual 437
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 518, actual 524
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 13, actual 10
+   numPlayers: 2
+      player 0: handCount 59, deckCount 464, discardCount 500
+      player 1: handCount 245, deckCount 129, discardCount 468
+   playedCardCount 255
+   current player: 0
+   coins: 10
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 20, actual 22
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 357, actual 356
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 375, actual 357
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 304, actual 321
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 9, actual 6
+   numPlayers: 3
+      player 0: handCount 85, deckCount 206, discardCount 146
+      player 1: handCount 19, deckCount 385, discardCount 296
+      player 2: handCount 156, deckCount 354, discardCount 221
+   playedCardCount 356
+   current player: 1
+   coins: 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 112, actual 114
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 161, actual 160
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 107, actual 96
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 246, actual 256
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 41, actual 36
+   numPlayers: 4
+      player 0: handCount 380, deckCount 57, discardCount 118
+      player 1: handCount 37, deckCount 219, discardCount 214
+      player 2: handCount 401, deckCount 93, discardCount 180
+      player 3: handCount 111, deckCount 140, discardCount 215
+   playedCardCount 160
+   current player: 3
+   coins: 36
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 217, actual 219
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 382, actual 381
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 118, actual 108
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 136, actual 145
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 58, actual 55
+   numPlayers: 3
+      player 0: handCount 65, deckCount 369, discardCount 106
+      player 1: handCount 216, deckCount 133, discardCount 123
+      player 2: handCount 497, deckCount 49, discardCount 243
+   playedCardCount 381
+   current player: 1
+   coins: 55
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 339, actual 341
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 54, actual 53
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 343, actual 332
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 135, actual 145
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 88, actual 84
+   numPlayers: 4
+      player 0: handCount 396, deckCount 260, discardCount 295
+      player 1: handCount 437, deckCount 284, discardCount 339
+      player 2: handCount 338, deckCount 367, discardCount 113
+      player 3: handCount 283, deckCount 165, discardCount 109
+   playedCardCount 53
+   current player: 2
+   coins: 84
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 290, actual 292
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 372, actual 371
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 161, actual 154
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 179, actual 185
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 63, actual 60
+   numPlayers: 4
+      player 0: handCount 289, deckCount 186, discardCount 156
+      player 1: handCount 67, deckCount 108, discardCount 393
+      player 2: handCount 279, deckCount 257, discardCount 186
+      player 3: handCount 181, deckCount 151, discardCount 303
+   playedCardCount 371
+   current player: 0
+   coins: 60
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 318, actual 320
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 124, actual 123
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 376, actual 368
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 163, actual 170
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 73, actual 69
+   numPlayers: 3
+      player 0: handCount 320, deckCount 461, discardCount 149
+      player 1: handCount 317, deckCount 379, discardCount 162
+      player 2: handCount 34, deckCount 86, discardCount 280
+   playedCardCount 123
+   current player: 1
+   coins: 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 224, actual 226
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 198, actual 197
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 284, actual 281
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 69, actual 71
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 47, actual 42
+   numPlayers: 2
+      player 0: handCount 223, deckCount 306, discardCount 49
+      player 1: handCount 296, deckCount 227, discardCount 415
+   playedCardCount 197
+   current player: 0
+   coins: 42
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 336, actual 338
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 415, actual 414
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 60, actual 56
+   numPlayers: 2
+      player 0: handCount 222, deckCount 72, discardCount 2
+      player 1: handCount 335, deckCount 22, discardCount 428
+   playedCardCount 414
+   current player: 1
+   coins: 56
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 356, actual 358
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 105, actual 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 9, actual 26
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 50, actual 32
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 74, actual 69
+   numPlayers: 4
+      player 0: handCount 302, deckCount 496, discardCount 60
+      player 1: handCount 181, deckCount 67, discardCount 178
+      player 2: handCount 431, deckCount 498, discardCount 141
+      player 3: handCount 355, deckCount 23, discardCount 38
+   playedCardCount 104
+   current player: 3
+   coins: 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 228, actual 230
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 234, actual 233
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 100, actual 96
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 368, actual 371
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 58, actual 55
+   numPlayers: 4
+      player 0: handCount 256, deckCount 453, discardCount 389
+      player 1: handCount 210, deckCount 121, discardCount 147
+      player 2: handCount 103, deckCount 146, discardCount 142
+      player 3: handCount 227, deckCount 120, discardCount 350
+   playedCardCount 233
+   current player: 3
+   coins: 55
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 207, actual 209
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 56, actual 55
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 463, actual 461
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 264, actual 265
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 46, actual 43
+   numPlayers: 3
+      player 0: handCount 176, deckCount 170, discardCount 137
+      player 1: handCount 323, deckCount 127, discardCount 38
+      player 2: handCount 206, deckCount 478, discardCount 251
+   playedCardCount 55
+   current player: 2
+   coins: 43
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 230, actual 232
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 298, actual 297
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 454, actual 451
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 474, actual 476
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 43, actual 40
+   numPlayers: 4
+      player 0: handCount 28, deckCount 368, discardCount 25
+      player 1: handCount 229, deckCount 469, discardCount 461
+      player 2: handCount 110, deckCount 57, discardCount 91
+      player 3: handCount 251, deckCount 15, discardCount 404
+   playedCardCount 297
+   current player: 1
+   coins: 40
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 231, actual 233
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 302, actual 301
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 275, actual 274
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 54, actual 50
+   numPlayers: 3
+      player 0: handCount 363, deckCount 96, discardCount 409
+      player 1: handCount 230, deckCount 303, discardCount 303
+      player 2: handCount 375, deckCount 48, discardCount 462
+   playedCardCount 301
+   current player: 1
+   coins: 50
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 195, actual 197
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 171, actual 170
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 226, actual 216
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 464, actual 473
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 47, actual 44
+   numPlayers: 3
+      player 0: handCount 414, deckCount 315, discardCount 123
+      player 1: handCount 359, deckCount 329, discardCount 366
+      player 2: handCount 194, deckCount 243, discardCount 449
+   playedCardCount 170
+   current player: 2
+   coins: 44
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 33, actual 35
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 440, actual 439
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 58, actual 38
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 235, actual 254
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 14, actual 10
+   numPlayers: 3
+      player 0: handCount 408, deckCount 209, discardCount 477
+      player 1: handCount 74, deckCount 241, discardCount 356
+      player 2: handCount 32, deckCount 74, discardCount 221
+   playedCardCount 439
+   current player: 2
+   coins: 10
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 59, actual 61
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 163, actual 162
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 166, actual 138
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 14, actual 41
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 13, actual 10
+   numPlayers: 2
+      player 0: handCount 284, deckCount 95, discardCount 318
+      player 1: handCount 58, deckCount 181, discardCount 1
+   playedCardCount 162
+   current player: 1
+   coins: 10
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 48, actual 50
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 80, actual 79
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 471, actual 453
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 303, actual 320
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 14, actual 11
+   numPlayers: 3
+      player 0: handCount 47, deckCount 493, discardCount 283
+      player 1: handCount 371, deckCount 417, discardCount 410
+      player 2: handCount 388, deckCount 81, discardCount 311
+   playedCardCount 79
+   current player: 0
+   coins: 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 19, actual 21
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 338, actual 337
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 22, actual 4
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 288, actual 305
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 7, actual 3
+   numPlayers: 3
+      player 0: handCount 172, deckCount 74, discardCount 378
+      player 1: handCount 319, deckCount 299, discardCount 399
+      player 2: handCount 18, deckCount 52, discardCount 260
+   playedCardCount 337
+   current player: 2
+   coins: 3
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 49, actual 51
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 201, actual 200
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 233, actual 232
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 21, actual 16
+   numPlayers: 4
+      player 0: handCount 103, deckCount 470, discardCount 137
+      player 1: handCount 48, deckCount 240, discardCount 176
+      player 2: handCount 245, deckCount 85, discardCount 153
+      player 3: handCount 400, deckCount 423, discardCount 126
+   playedCardCount 200
+   current player: 1
+   coins: 16
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 476, actual 478
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 189, actual 188
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 129, actual 128
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 106, actual 101
+   numPlayers: 2
+      player 0: handCount 475, deckCount 144, discardCount 413
+      player 1: handCount 451, deckCount 475, discardCount 450
+   playedCardCount 188
+   current player: 0
+   coins: 101
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 355, actual 357
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 269, actual 268
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 444, actual 428
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 421, actual 436
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 97, actual 93
+   numPlayers: 4
+      player 0: handCount 354, deckCount 454, discardCount 413
+      player 1: handCount 148, deckCount 488, discardCount 492
+      player 2: handCount 463, deckCount 310, discardCount 80
+      player 3: handCount 163, deckCount 358, discardCount 315
+   playedCardCount 268
+   current player: 0
+   coins: 93
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 253, actual 255
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 70, actual 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 372, actual 368
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 451, actual 454
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 35, actual 31
+   numPlayers: 3
+      player 0: handCount 252, deckCount 389, discardCount 436
+      player 1: handCount 191, deckCount 415, discardCount 227
+      player 2: handCount 140, deckCount 297, discardCount 480
+   playedCardCount 69
+   current player: 0
+   coins: 31
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 313, actual 315
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 4, actual 3
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 155, actual 150
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 434, actual 438
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 56, actual 52
+   numPlayers: 2
+      player 0: handCount 89, deckCount 114, discardCount 28
+      player 1: handCount 312, deckCount 157, discardCount 434
+   playedCardCount 3
+   current player: 1
+   coins: 52
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 216, actual 218
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 149, actual 148
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 271, actual 224
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 361, actual 407
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 49, actual 44
+   numPlayers: 3
+      player 0: handCount 85, deckCount 336, discardCount 490
+      player 1: handCount 215, deckCount 313, discardCount 321
+      player 2: handCount 452, deckCount 410, discardCount 271
+   playedCardCount 148
+   current player: 1
+   coins: 44
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 27, actual 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 176, actual 175
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 307, actual 272
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 489, actual 523
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 6, actual 4
+   numPlayers: 4
+      player 0: handCount 105, deckCount 111, discardCount 268
+      player 1: handCount 26, deckCount 322, discardCount 476
+      player 2: handCount 58, deckCount 464, discardCount 378
+      player 3: handCount 192, deckCount 398, discardCount 57
+   playedCardCount 175
+   current player: 1
+   coins: 4
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 263, actual 265
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 282, actual 281
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 201, actual 189
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 247, actual 258
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 66, actual 63
+   numPlayers: 2
+      player 0: handCount 262, deckCount 233, discardCount 217
+      player 1: handCount 223, deckCount 233, discardCount 270
+   playedCardCount 281
+   current player: 0
+   coins: 63
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 280, actual 282
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 155, actual 154
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 239, actual 234
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 33, actual 37
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 67, actual 62
+   numPlayers: 4
+      player 0: handCount 279, deckCount 254, discardCount 20
+      player 1: handCount 496, deckCount 24, discardCount 236
+      player 2: handCount 203, deckCount 264, discardCount 431
+      player 3: handCount 234, deckCount 450, discardCount 340
+   playedCardCount 154
+   current player: 0
+   coins: 62
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 128, actual 130
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 25, actual 24
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected >= 14, actual 12
+   numPlayers: 4
+      player 0: handCount 72, deckCount 223, discardCount 89
+      player 1: handCount 444, deckCount 121, discardCount 270
+      player 2: handCount 127, deckCount 6, discardCount 126
+      player 3: handCount 196, deckCount 205, discardCount 496
+   playedCardCount 24
+   current player: 2
+   coins: 12
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 466, actual 468
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 358, actual 357
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 355, actual 336
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 41, actual 59
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 109, actual 104
+   numPlayers: 2
+      player 0: handCount 71, deckCount 422, discardCount 247
+      player 1: handCount 465, deckCount 360, discardCount 38
+   playedCardCount 357
+   current player: 1
+   coins: 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 371, actual 373
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 272, actual 271
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 314, actual 310
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 93, actual 96
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 114, actual 109
+   numPlayers: 2
+      player 0: handCount 370, deckCount 337, discardCount 72
+      player 1: handCount 304, deckCount 244, discardCount 28
+   playedCardCount 271
+   current player: 0
+   coins: 109
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 124, actual 126
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 77, actual 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 16, actual 13
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 209, actual 211
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 33, actual 27
+   numPlayers: 2
+      player 0: handCount 123, deckCount 64, discardCount 163
+      player 1: handCount 103, deckCount 321, discardCount 363
+   playedCardCount 76
+   current player: 0
+   coins: 27
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 49, actual 51
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 217, actual 216
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 80, actual 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 324, actual 334
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 19, actual 14
+   numPlayers: 3
+      player 0: handCount 410, deckCount 341, discardCount 15
+      player 1: handCount 120, deckCount 260, discardCount 240
+      player 2: handCount 48, deckCount 86, discardCount 320
+   playedCardCount 216
+   current player: 2
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 421, actual 423
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 12, actual 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 170, actual 151
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 483, actual 501
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 110, actual 107
+   numPlayers: 3
+      player 0: handCount 420, deckCount 185, discardCount 470
+      player 1: handCount 275, deckCount 206, discardCount 43
+      player 2: handCount 179, deckCount 481, discardCount 408
+   playedCardCount 11
+   current player: 0
+   coins: 107
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 104, actual 106
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 464, actual 463
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 409, actual 395
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 486, actual 499
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 29, actual 24
+   numPlayers: 4
+      player 0: handCount 398, deckCount 341, discardCount 372
+      player 1: handCount 244, deckCount 146, discardCount 191
+      player 2: handCount 287, deckCount 466, discardCount 79
+      player 3: handCount 103, deckCount 431, discardCount 466
+   playedCardCount 463
+   current player: 3
+   coins: 24
+
+randomtestcard1.c:
+Running 100 tests of card: Village
+ヽ(・∀・)ﾉ ALL TESTS PASSED
+
+randomtestcard2.c:
+Running 100 tests of card: Smithy
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 317, actual 316
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 50, actual 51
+   numPlayers: 4
+      player 0: handCount 331, deckCount 286, discardCount 140
+      player 1: handCount 179, deckCount 66, discardCount 222
+      player 2: handCount 38, deckCount 466, discardCount 0
+      player 3: handCount 315, deckCount 53, discardCount 79
+   playedCardCount 165
+   current player: 3
+   coins: 54
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 167, actual 166
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 367, actual 368
+   numPlayers: 2
+      player 0: handCount 28, deckCount 281, discardCount 458
+      player 1: handCount 165, deckCount 370, discardCount 106
+   playedCardCount 292
+   current player: 1
+   coins: 40
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 443, actual 442
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 178, actual 179
+   numPlayers: 2
+      player 0: handCount 441, deckCount 181, discardCount 92
+      player 1: handCount 390, deckCount 413, discardCount 83
+   playedCardCount 53
+   current player: 0
+   coins: 99
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 8, actual 7
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 40, actual 41
+   numPlayers: 3
+      player 0: handCount 368, deckCount 26, discardCount 141
+      player 1: handCount 6, deckCount 43, discardCount 291
+      player 2: handCount 467, deckCount 262, discardCount 269
+   playedCardCount 344
+   current player: 1
+   coins: 1
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 182, actual 181
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 420, actual 421
+   numPlayers: 2
+      player 0: handCount 180, deckCount 423, discardCount 474
+      player 1: handCount 263, deckCount 99, discardCount 471
+   playedCardCount 350
+   current player: 0
+   coins: 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 70, actual 69
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 183, actual 184
+   numPlayers: 2
+      player 0: handCount 313, deckCount 496, discardCount 90
+      player 1: handCount 68, deckCount 186, discardCount 109
+   playedCardCount 146
+   current player: 1
+   coins: 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 27, actual 26
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 79, actual 80
+   numPlayers: 2
+      player 0: handCount 335, deckCount 94, discardCount 199
+      player 1: handCount 25, deckCount 82, discardCount 255
+   playedCardCount 335
+   current player: 1
+   coins: 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 248, actual 247
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 48, actual 49
+   numPlayers: 3
+      player 0: handCount 246, deckCount 51, discardCount 449
+      player 1: handCount 303, deckCount 316, discardCount 85
+      player 2: handCount 57, deckCount 195, discardCount 441
+   playedCardCount 171
+   current player: 0
+   coins: 42
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 54, actual 53
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 433, actual 434
+   numPlayers: 2
+      player 0: handCount 52, deckCount 436, discardCount 417
+      player 1: handCount 5, deckCount 14, discardCount 488
+   playedCardCount 78
+   current player: 0
+   coins: 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 304, actual 303
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 51, actual 52
+   numPlayers: 3
+      player 0: handCount 67, deckCount 131, discardCount 313
+      player 1: handCount 302, deckCount 54, discardCount 233
+      player 2: handCount 35, deckCount 330, discardCount 255
+   playedCardCount 38
+   current player: 1
+   coins: 66
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 185, actual 184
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 74, actual 75
+   numPlayers: 4
+      player 0: handCount 183, deckCount 77, discardCount 33
+      player 1: handCount 84, deckCount 142, discardCount 195
+      player 2: handCount 270, deckCount 15, discardCount 127
+      player 3: handCount 476, deckCount 238, discardCount 182
+   playedCardCount 453
+   current player: 0
+   coins: 42
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 86, actual 85
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 404, actual 405
+   numPlayers: 4
+      player 0: handCount 160, deckCount 169, discardCount 170
+      player 1: handCount 384, deckCount 184, discardCount 145
+      player 2: handCount 479, deckCount 356, discardCount 345
+      player 3: handCount 84, deckCount 407, discardCount 371
+   playedCardCount 136
+   current player: 3
+   coins: 18
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 238, actual 237
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 430, actual 431
+   numPlayers: 3
+      player 0: handCount 101, deckCount 48, discardCount 214
+      player 1: handCount 236, deckCount 433, discardCount 492
+      player 2: handCount 372, deckCount 194, discardCount 70
+   playedCardCount 283
+   current player: 1
+   coins: 48
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 86, actual 85
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 117, actual 118
+   numPlayers: 2
+      player 0: handCount 100, deckCount 309, discardCount 461
+      player 1: handCount 84, deckCount 120, discardCount 309
+   playedCardCount 394
+   current player: 1
+   coins: 20
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 319, actual 318
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 390, actual 391
+   numPlayers: 2
+      player 0: handCount 317, deckCount 393, discardCount 361
+      player 1: handCount 213, deckCount 105, discardCount 192
+   playedCardCount 190
+   current player: 0
+   coins: 92
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 75, actual 74
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 113, actual 114
+   numPlayers: 2
+      player 0: handCount 73, deckCount 116, discardCount 305
+      player 1: handCount 378, deckCount 267, discardCount 250
+   playedCardCount 142
+   current player: 0
+   coins: 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 333, actual 332
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 199, actual 200
+   numPlayers: 2
+      player 0: handCount 331, deckCount 202, discardCount 429
+      player 1: handCount 240, deckCount 428, discardCount 410
+   playedCardCount 165
+   current player: 0
+   coins: 72
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 407, actual 406
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 399, actual 400
+   numPlayers: 4
+      player 0: handCount 339, deckCount 419, discardCount 273
+      player 1: handCount 405, deckCount 402, discardCount 62
+      player 2: handCount 375, deckCount 249, discardCount 336
+      player 3: handCount 405, deckCount 139, discardCount 476
+   playedCardCount 9
+   current player: 1
+   coins: 109
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 111, actual 110
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 435, actual 436
+   numPlayers: 2
+      player 0: handCount 109, deckCount 438, discardCount 493
+      player 1: handCount 190, deckCount 59, discardCount 229
+   playedCardCount 216
+   current player: 0
+   coins: 21
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 156, actual 155
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 183, actual 184
+   numPlayers: 2
+      player 0: handCount 154, deckCount 186, discardCount 314
+      player 1: handCount 300, deckCount 348, discardCount 23
+   playedCardCount 169
+   current player: 0
+   coins: 40
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 286, actual 285
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 112, actual 113
+   numPlayers: 2
+      player 0: handCount 383, deckCount 471, discardCount 377
+      player 1: handCount 284, deckCount 115, discardCount 397
+   playedCardCount 185
+   current player: 1
+   coins: 76
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 87, actual 86
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 427, actual 428
+   numPlayers: 3
+      player 0: handCount 332, deckCount 353, discardCount 10
+      player 1: handCount 376, deckCount 120, discardCount 305
+      player 2: handCount 85, deckCount 430, discardCount 183
+   playedCardCount 483
+   current player: 2
+   coins: 19
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 420, actual 419
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 299, actual 300
+   numPlayers: 2
+      player 0: handCount 418, deckCount 302, discardCount 236
+      player 1: handCount 125, deckCount 50, discardCount 193
+   playedCardCount 365
+   current player: 0
+   coins: 108
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 366, actual 365
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 110, actual 111
+   numPlayers: 4
+      player 0: handCount 29, deckCount 299, discardCount 45
+      player 1: handCount 212, deckCount 319, discardCount 222
+      player 2: handCount 159, deckCount 491, discardCount 66
+      player 3: handCount 364, deckCount 113, discardCount 142
+   playedCardCount 437
+   current player: 3
+   coins: 77
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 252, actual 251
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 393, actual 394
+   numPlayers: 2
+      player 0: handCount 250, deckCount 396, discardCount 229
+      player 1: handCount 216, deckCount 345, discardCount 217
+   playedCardCount 331
+   current player: 0
+   coins: 61
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 195, actual 194
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 292, actual 293
+   numPlayers: 3
+      player 0: handCount 81, deckCount 477, discardCount 486
+      player 1: handCount 258, deckCount 108, discardCount 410
+      player 2: handCount 193, deckCount 295, discardCount 217
+   playedCardCount 362
+   current player: 2
+   coins: 36
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 284, actual 283
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 491, actual 492
+   numPlayers: 2
+      player 0: handCount 266, deckCount 249, discardCount 129
+      player 1: handCount 282, deckCount 494, discardCount 12
+   playedCardCount 276
+   current player: 1
+   coins: 53
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 473, actual 472
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 127, actual 128
+   numPlayers: 3
+      player 0: handCount 226, deckCount 347, discardCount 500
+      player 1: handCount 471, deckCount 130, discardCount 57
+      player 2: handCount 17, deckCount 438, discardCount 178
+   playedCardCount 308
+   current player: 1
+   coins: 115
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 210, actual 209
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 261, actual 262
+   numPlayers: 4
+      player 0: handCount 367, deckCount 182, discardCount 196
+      player 1: handCount 208, deckCount 264, discardCount 401
+      player 2: handCount 346, deckCount 309, discardCount 88
+      player 3: handCount 87, deckCount 421, discardCount 18
+   playedCardCount 283
+   current player: 1
+   coins: 33
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 458, actual 457
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 36, actual 37
+   numPlayers: 4
+      player 0: handCount 35, deckCount 375, discardCount 175
+      player 1: handCount 39, deckCount 216, discardCount 140
+      player 2: handCount 456, deckCount 39, discardCount 487
+      player 3: handCount 11, deckCount 408, discardCount 35
+   playedCardCount 80
+   current player: 2
+   coins: 124
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 84, actual 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 256, actual 257
+   numPlayers: 4
+      player 0: handCount 284, deckCount 232, discardCount 108
+      player 1: handCount 82, deckCount 259, discardCount 498
+      player 2: handCount 334, deckCount 267, discardCount 129
+      player 3: handCount 208, deckCount 300, discardCount 210
+   playedCardCount 406
+   current player: 1
+   coins: 14
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 5, actual 4
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 385, actual 386
+   numPlayers: 2
+      player 0: handCount 3, deckCount 388, discardCount 305
+      player 1: handCount 223, deckCount 10, discardCount 390
+   playedCardCount 134
+   current player: 0
+   coins: 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 103, actual 102
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 192, actual 193
+   numPlayers: 3
+      player 0: handCount 125, deckCount 382, discardCount 309
+      player 1: handCount 101, deckCount 195, discardCount 444
+      player 2: handCount 101, deckCount 142, discardCount 255
+   playedCardCount 419
+   current player: 1
+   coins: 7
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 175, actual 174
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 350, actual 351
+   numPlayers: 4
+      player 0: handCount 20, deckCount 265, discardCount 422
+      player 1: handCount 479, deckCount 13, discardCount 217
+      player 2: handCount 189, deckCount 56, discardCount 390
+      player 3: handCount 173, deckCount 353, discardCount 401
+   playedCardCount 267
+   current player: 3
+   coins: 32
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 371, actual 370
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 314, actual 315
+   numPlayers: 4
+      player 0: handCount 14, deckCount 218, discardCount 308
+      player 1: handCount 369, deckCount 317, discardCount 184
+      player 2: handCount 100, deckCount 185, discardCount 497
+      player 3: handCount 120, deckCount 357, discardCount 137
+   playedCardCount 466
+   current player: 1
+   coins: 80
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 413, actual 412
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 357, actual 358
+   numPlayers: 4
+      player 0: handCount 411, deckCount 360, discardCount 387
+      player 1: handCount 179, deckCount 210, discardCount 135
+      player 2: handCount 122, deckCount 473, discardCount 363
+      player 3: handCount 384, deckCount 7, discardCount 288
+   playedCardCount 107
+   current player: 0
+   coins: 99
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 467, actual 466
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 157, actual 158
+   numPlayers: 3
+      player 0: handCount 475, deckCount 135, discardCount 9
+      player 1: handCount 465, deckCount 160, discardCount 276
+      player 2: handCount 173, deckCount 173, discardCount 354
+   playedCardCount 62
+   current player: 1
+   coins: 91
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 294, actual 293
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 124, actual 125
+   numPlayers: 3
+      player 0: handCount 292, deckCount 127, discardCount 115
+      player 1: handCount 409, deckCount 155, discardCount 483
+      player 2: handCount 186, deckCount 259, discardCount 44
+   playedCardCount 178
+   current player: 0
+   coins: 47
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 490, actual 489
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 398, actual 399
+   numPlayers: 3
+      player 0: handCount 340, deckCount 373, discardCount 150
+      player 1: handCount 488, deckCount 401, discardCount 392
+      player 2: handCount 56, deckCount 135, discardCount 209
+   playedCardCount 356
+   current player: 1
+   coins: 105
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 10, actual 9
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 65, actual 66
+   numPlayers: 4
+      player 0: handCount 25, deckCount 37, discardCount 47
+      player 1: handCount 8, deckCount 68, discardCount 176
+      player 2: handCount 304, deckCount 177, discardCount 21
+      player 3: handCount 96, deckCount 264, discardCount 451
+   playedCardCount 423
+   current player: 1
+   coins: 3
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 287, actual 286
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 54, actual 55
+   numPlayers: 3
+      player 0: handCount 9, deckCount 21, discardCount 31
+      player 1: handCount 285, deckCount 57, discardCount 144
+      player 2: handCount 355, deckCount 383, discardCount 34
+   playedCardCount 432
+   current player: 1
+   coins: 56
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 267, actual 266
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 497, actual 498
+   numPlayers: 4
+      player 0: handCount 265, deckCount 500, discardCount 141
+      player 1: handCount 182, deckCount 300, discardCount 35
+      player 2: handCount 79, deckCount 26, discardCount 427
+      player 3: handCount 280, deckCount 475, discardCount 336
+   playedCardCount 243
+   current player: 0
+   coins: 66
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 420, actual 419
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 6, actual 7
+   numPlayers: 4
+      player 0: handCount 360, deckCount 452, discardCount 16
+      player 1: handCount 418, deckCount 9, discardCount 149
+      player 2: handCount 73, deckCount 190, discardCount 35
+      player 3: handCount 91, deckCount 92, discardCount 323
+   playedCardCount 237
+   current player: 1
+   coins: 87
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 242, actual 241
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 495, actual 496
+   numPlayers: 2
+      player 0: handCount 240, deckCount 498, discardCount 114
+      player 1: handCount 32, deckCount 412, discardCount 417
+   playedCardCount 208
+   current player: 0
+   coins: 58
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 468, actual 467
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 179, actual 180
+   numPlayers: 2
+      player 0: handCount 466, deckCount 182, discardCount 38
+      player 1: handCount 169, deckCount 331, discardCount 1
+   playedCardCount 338
+   current player: 0
+   coins: 96
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 127, actual 126
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 273, actual 274
+   numPlayers: 2
+      player 0: handCount 125, deckCount 276, discardCount 479
+      player 1: handCount 254, deckCount 484, discardCount 150
+   playedCardCount 135
+   current player: 0
+   coins: 34
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 429, actual 428
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 8, actual 9
+   numPlayers: 4
+      player 0: handCount 448, deckCount 499, discardCount 155
+      player 1: handCount 427, deckCount 11, discardCount 173
+      player 2: handCount 25, deckCount 72, discardCount 356
+      player 3: handCount 348, deckCount 426, discardCount 90
+   playedCardCount 430
+   current player: 1
+   coins: 97
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 146, actual 145
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 13, actual 14
+   numPlayers: 2
+      player 0: handCount 144, deckCount 16, discardCount 72
+      player 1: handCount 477, deckCount 339, discardCount 485
+   playedCardCount 68
+   current player: 0
+   coins: 20
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 406, actual 405
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 97, actual 98
+   numPlayers: 4
+      player 0: handCount 300, deckCount 228, discardCount 475
+      player 1: handCount 115, deckCount 112, discardCount 225
+      player 2: handCount 404, deckCount 100, discardCount 163
+      player 3: handCount 214, deckCount 163, discardCount 269
+   playedCardCount 95
+   current player: 2
+   coins: 81
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 279, actual 278
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 434, actual 435
+   numPlayers: 4
+      player 0: handCount 277, deckCount 437, discardCount 229
+      player 1: handCount 143, deckCount 66, discardCount 100
+      player 2: handCount 246, deckCount 480, discardCount 345
+      player 3: handCount 283, deckCount 409, discardCount 423
+   playedCardCount 423
+   current player: 0
+   coins: 64
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 453, actual 452
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 423, actual 424
+   numPlayers: 2
+      player 0: handCount 201, deckCount 88, discardCount 244
+      player 1: handCount 451, deckCount 426, discardCount 464
+   playedCardCount 392
+   current player: 1
+   coins: 104
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 343, actual 342
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 199, actual 200
+   numPlayers: 3
+      player 0: handCount 358, deckCount 29, discardCount 472
+      player 1: handCount 341, deckCount 202, discardCount 466
+      player 2: handCount 460, deckCount 391, discardCount 312
+   playedCardCount 443
+   current player: 1
+   coins: 99
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 152, actual 151
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 66, actual 67
+   numPlayers: 3
+      player 0: handCount 49, deckCount 463, discardCount 368
+      player 1: handCount 150, deckCount 69, discardCount 259
+      player 2: handCount 159, deckCount 470, discardCount 353
+   playedCardCount 325
+   current player: 1
+   coins: 35
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 194, actual 193
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 262, actual 263
+   numPlayers: 2
+      player 0: handCount 192, deckCount 265, discardCount 100
+      player 1: handCount 364, deckCount 323, discardCount 67
+   playedCardCount 338
+   current player: 0
+   coins: 56
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 390, actual 389
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 336, actual 337
+   numPlayers: 4
+      player 0: handCount 388, deckCount 339, discardCount 300
+      player 1: handCount 267, deckCount 495, discardCount 134
+      player 2: handCount 299, deckCount 405, discardCount 75
+      player 3: handCount 402, deckCount 365, discardCount 122
+   playedCardCount 465
+   current player: 0
+   coins: 97
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 210, actual 209
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 17, actual 18
+   numPlayers: 4
+      player 0: handCount 208, deckCount 20, discardCount 480
+      player 1: handCount 454, deckCount 6, discardCount 338
+      player 2: handCount 324, deckCount 70, discardCount 7
+      player 3: handCount 484, deckCount 66, discardCount 415
+   playedCardCount 162
+   current player: 0
+   coins: 56
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 305, actual 304
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 402, actual 403
+   numPlayers: 2
+      player 0: handCount 303, deckCount 405, discardCount 295
+      player 1: handCount 436, deckCount 416, discardCount 439
+   playedCardCount 168
+   current player: 0
+   coins: 77
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 289, actual 288
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 151, actual 152
+   numPlayers: 3
+      player 0: handCount 287, deckCount 154, discardCount 222
+      player 1: handCount 420, deckCount 275, discardCount 24
+      player 2: handCount 63, deckCount 54, discardCount 7
+   playedCardCount 11
+   current player: 0
+   coins: 40
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 307, actual 306
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 327, actual 328
+   numPlayers: 4
+      player 0: handCount 325, deckCount 450, discardCount 5
+      player 1: handCount 130, deckCount 108, discardCount 4
+      player 2: handCount 189, deckCount 319, discardCount 388
+      player 3: handCount 305, deckCount 330, discardCount 104
+   playedCardCount 292
+   current player: 3
+   coins: 79
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 244, actual 243
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 53, actual 54
+   numPlayers: 4
+      player 0: handCount 59, deckCount 168, discardCount 191
+      player 1: handCount 491, deckCount 463, discardCount 113
+      player 2: handCount 439, deckCount 193, discardCount 49
+      player 3: handCount 242, deckCount 56, discardCount 494
+   playedCardCount 187
+   current player: 3
+   coins: 60
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 369, actual 368
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 420, actual 421
+   numPlayers: 3
+      player 0: handCount 367, deckCount 423, discardCount 289
+      player 1: handCount 263, deckCount 497, discardCount 135
+      player 2: handCount 301, deckCount 91, discardCount 63
+   playedCardCount 107
+   current player: 0
+   coins: 78
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 450, actual 449
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 83, actual 84
+   numPlayers: 4
+      player 0: handCount 448, deckCount 86, discardCount 442
+      player 1: handCount 419, deckCount 329, discardCount 249
+      player 2: handCount 358, deckCount 2, discardCount 197
+      player 3: handCount 468, deckCount 42, discardCount 39
+   playedCardCount 423
+   current player: 0
+   coins: 106
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 39, actual 38
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 383, actual 384
+   numPlayers: 3
+      player 0: handCount 288, deckCount 347, discardCount 197
+      player 1: handCount 404, deckCount 132, discardCount 458
+      player 2: handCount 37, deckCount 386, discardCount 50
+   playedCardCount 52
+   current player: 2
+   coins: 12
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 464, actual 463
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 126, actual 127
+   numPlayers: 4
+      player 0: handCount 109, deckCount 197, discardCount 170
+      player 1: handCount 431, deckCount 319, discardCount 273
+      player 2: handCount 4, deckCount 347, discardCount 401
+      player 3: handCount 462, deckCount 129, discardCount 174
+   playedCardCount 125
+   current player: 3
+   coins: 114
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 249, actual 248
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 30, actual 31
+   numPlayers: 4
+      player 0: handCount 445, deckCount 241, discardCount 419
+      player 1: handCount 247, deckCount 33, discardCount 271
+      player 2: handCount 183, deckCount 439, discardCount 65
+      player 3: handCount 165, deckCount 204, discardCount 431
+   playedCardCount 78
+   current player: 1
+   coins: 55
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 131, actual 130
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 226, actual 227
+   numPlayers: 3
+      player 0: handCount 129, deckCount 229, discardCount 193
+      player 1: handCount 54, deckCount 322, discardCount 157
+      player 2: handCount 140, deckCount 9, discardCount 174
+   playedCardCount 33
+   current player: 0
+   coins: 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 29, actual 28
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 321, actual 322
+   numPlayers: 2
+      player 0: handCount 27, deckCount 324, discardCount 66
+      player 1: handCount 475, deckCount 395, discardCount 149
+   playedCardCount 276
+   current player: 0
+   coins: 3
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 64, actual 63
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 291, actual 292
+   numPlayers: 4
+      player 0: handCount 163, deckCount 397, discardCount 215
+      player 1: handCount 366, deckCount 219, discardCount 151
+      player 2: handCount 62, deckCount 294, discardCount 265
+      player 3: handCount 365, deckCount 383, discardCount 192
+   playedCardCount 460
+   current player: 2
+   coins: 7
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 480, actual 479
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 229, actual 230
+   numPlayers: 3
+      player 0: handCount 446, deckCount 151, discardCount 264
+      player 1: handCount 1, deckCount 232, discardCount 145
+      player 2: handCount 478, deckCount 232, discardCount 115
+   playedCardCount 58
+   current player: 2
+   coins: 109
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 439, actual 438
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 180, actual 181
+   numPlayers: 3
+      player 0: handCount 132, deckCount 226, discardCount 20
+      player 1: handCount 437, deckCount 183, discardCount 28
+      player 2: handCount 50, deckCount 335, discardCount 272
+   playedCardCount 253
+   current player: 1
+   coins: 90
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 119, actual 118
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 490, actual 491
+   numPlayers: 2
+      player 0: handCount 117, deckCount 493, discardCount 51
+      player 1: handCount 482, deckCount 107, discardCount 36
+   playedCardCount 481
+   current player: 0
+   coins: 15
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 441, actual 440
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 88, actual 89
+   numPlayers: 3
+      player 0: handCount 439, deckCount 91, discardCount 111
+      player 1: handCount 259, deckCount 448, discardCount 356
+      player 2: handCount 85, deckCount 89, discardCount 213
+   playedCardCount 182
+   current player: 0
+   coins: 120
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 412, actual 411
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 194, actual 195
+   numPlayers: 3
+      player 0: handCount 48, deckCount 295, discardCount 60
+      player 1: handCount 410, deckCount 197, discardCount 328
+      player 2: handCount 262, deckCount 207, discardCount 280
+   playedCardCount 219
+   current player: 1
+   coins: 91
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 29, actual 28
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 110, actual 111
+   numPlayers: 4
+      player 0: handCount 11, deckCount 475, discardCount 44
+      player 1: handCount 27, deckCount 113, discardCount 42
+      player 2: handCount 66, deckCount 324, discardCount 9
+      player 3: handCount 59, deckCount 332, discardCount 31
+   playedCardCount 370
+   current player: 1
+   coins: 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 367, actual 366
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 303, actual 304
+   numPlayers: 2
+      player 0: handCount 365, deckCount 306, discardCount 324
+      player 1: handCount 487, deckCount 191, discardCount 131
+   playedCardCount 95
+   current player: 0
+   coins: 75
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 493, actual 492
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 361, actual 362
+   numPlayers: 2
+      player 0: handCount 491, deckCount 1, discardCount 363
+      player 1: handCount 331, deckCount 385, discardCount 307
+   playedCardCount 423
+   current player: 0
+   coins: 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 233, actual 232
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 252, actual 253
+   numPlayers: 2
+      player 0: handCount 122, deckCount 294, discardCount 431
+      player 1: handCount 231, deckCount 255, discardCount 74
+   playedCardCount 185
+   current player: 1
+   coins: 45
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 36, actual 35
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 316, actual 317
+   numPlayers: 2
+      player 0: handCount 34, deckCount 319, discardCount 96
+      player 1: handCount 402, deckCount 102, discardCount 97
+   playedCardCount 397
+   current player: 0
+   coins: 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 197, actual 196
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 97, actual 98
+   numPlayers: 3
+      player 0: handCount 195, deckCount 100, discardCount 205
+      player 1: handCount 491, deckCount 217, discardCount 117
+      player 2: handCount 179, deckCount 305, discardCount 173
+   playedCardCount 447
+   current player: 0
+   coins: 39
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 386, actual 385
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 273, actual 274
+   numPlayers: 3
+      player 0: handCount 384, deckCount 276, discardCount 142
+      player 1: handCount 350, deckCount 431, discardCount 417
+      player 2: handCount 477, deckCount 392, discardCount 18
+   playedCardCount 300
+   current player: 0
+   coins: 79
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 443, actual 442
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 163, actual 164
+   numPlayers: 4
+      player 0: handCount 441, deckCount 166, discardCount 249
+      player 1: handCount 150, deckCount 34, discardCount 348
+      player 2: handCount 24, deckCount 310, discardCount 248
+      player 3: handCount 188, deckCount 374, discardCount 393
+   playedCardCount 134
+   current player: 0
+   coins: 103
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 96, actual 95
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 131, actual 132
+   numPlayers: 3
+      player 0: handCount 94, deckCount 134, discardCount 304
+      player 1: handCount 342, deckCount 85, discardCount 68
+      player 2: handCount 322, deckCount 496, discardCount 396
+   playedCardCount 364
+   current player: 0
+   coins: 21
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 126, actual 125
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 72, actual 73
+   numPlayers: 4
+      player 0: handCount 124, deckCount 75, discardCount 401
+      player 1: handCount 237, deckCount 269, discardCount 54
+      player 2: handCount 240, deckCount 211, discardCount 380
+      player 3: handCount 387, deckCount 283, discardCount 282
+   playedCardCount 59
+   current player: 0
+   coins: 36
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 167, actual 166
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 122, actual 123
+   numPlayers: 2
+      player 0: handCount 165, deckCount 125, discardCount 38
+      player 1: handCount 378, deckCount 383, discardCount 189
+   playedCardCount 178
+   current player: 0
+   coins: 30
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 225, actual 224
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 411, actual 412
+   numPlayers: 4
+      player 0: handCount 151, deckCount 167, discardCount 480
+      player 1: handCount 223, deckCount 414, discardCount 335
+      player 2: handCount 345, deckCount 30, discardCount 23
+      player 3: handCount 65, deckCount 349, discardCount 488
+   playedCardCount 109
+   current player: 1
+   coins: 46
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 201, actual 200
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 67, actual 68
+   numPlayers: 3
+      player 0: handCount 201, deckCount 74, discardCount 448
+      player 1: handCount 199, deckCount 70, discardCount 403
+      player 2: handCount 59, deckCount 304, discardCount 376
+   playedCardCount 186
+   current player: 1
+   coins: 43
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 455, actual 454
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 346, actual 347
+   numPlayers: 3
+      player 0: handCount 428, deckCount 150, discardCount 14
+      player 1: handCount 419, deckCount 221, discardCount 119
+      player 2: handCount 453, deckCount 349, discardCount 293
+   playedCardCount 168
+   current player: 2
+   coins: 112
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 474, actual 473
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 431, actual 432
+   numPlayers: 2
+      player 0: handCount 472, deckCount 434, discardCount 265
+      player 1: handCount 20, deckCount 373, discardCount 138
+   playedCardCount 271
+   current player: 0
+   coins: 94
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 368, actual 367
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 144, actual 145
+   numPlayers: 3
+      player 0: handCount 366, deckCount 147, discardCount 358
+      player 1: handCount 117, deckCount 459, discardCount 296
+      player 2: handCount 57, deckCount 489, discardCount 307
+   playedCardCount 311
+   current player: 0
+   coins: 89
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 89, actual 88
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 393, actual 394
+   numPlayers: 3
+      player 0: handCount 485, deckCount 89, discardCount 37
+      player 1: handCount 87, deckCount 396, discardCount 214
+      player 2: handCount 269, deckCount 124, discardCount 13
+   playedCardCount 408
+   current player: 1
+   coins: 11
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 255, actual 254
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 127, actual 128
+   numPlayers: 3
+      player 0: handCount 253, deckCount 130, discardCount 115
+      player 1: handCount 209, deckCount 120, discardCount 184
+      player 2: handCount 473, deckCount 43, discardCount 321
+   playedCardCount 109
+   current player: 0
+   coins: 48
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 495, actual 494
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 105, actual 106
+   numPlayers: 3
+      player 0: handCount 230, deckCount 415, discardCount 291
+      player 1: handCount 493, deckCount 108, discardCount 103
+      player 2: handCount 440, deckCount 406, discardCount 72
+   playedCardCount 294
+   current player: 1
+   coins: 113
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 246, actual 245
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 350, actual 351
+   numPlayers: 4
+      player 0: handCount 244, deckCount 353, discardCount 25
+      player 1: handCount 439, deckCount 54, discardCount 28
+      player 2: handCount 177, deckCount 329, discardCount 489
+      player 3: handCount 306, deckCount 405, discardCount 256
+   playedCardCount 35
+   current player: 0
+   coins: 43
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 63, actual 62
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 488, actual 489
+   numPlayers: 2
+      player 0: handCount 61, deckCount 491, discardCount 16
+      player 1: handCount 397, deckCount 356, discardCount 122
+   playedCardCount 487
+   current player: 0
+   coins: 13
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 197, actual 196
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 429, actual 430
+   numPlayers: 2
+      player 0: handCount 192, deckCount 98, discardCount 308
+      player 1: handCount 195, deckCount 432, discardCount 168
+   playedCardCount 447
+   current player: 1
+   coins: 31
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 97, actual 96
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 86, actual 87
+   numPlayers: 3
+      player 0: handCount 142, deckCount 127, discardCount 171
+      player 1: handCount 95, deckCount 89, discardCount 166
+      player 2: handCount 481, deckCount 368, discardCount 195
+   playedCardCount 98
+   current player: 1
+   coins: 27
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 429, actual 428
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 110, actual 111
+   numPlayers: 3
+      player 0: handCount 370, deckCount 129, discardCount 195
+      player 1: handCount 427, deckCount 113, discardCount 383
+      player 2: handCount 230, deckCount 86, discardCount 398
+   playedCardCount 239
+   current player: 1
+   coins: 90
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 163, actual 162
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 208, actual 209
+   numPlayers: 4
+      player 0: handCount 161, deckCount 211, discardCount 279
+      player 1: handCount 492, deckCount 125, discardCount 37
+      player 2: handCount 319, deckCount 94, discardCount 408
+      player 3: handCount 198, deckCount 449, discardCount 242
+   playedCardCount 492
+   current player: 0
+   coins: 29
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 312, actual 311
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 232, actual 233
+   numPlayers: 4
+      player 0: handCount 242, deckCount 47, discardCount 100
+      player 1: handCount 355, deckCount 497, discardCount 106
+      player 2: handCount 310, deckCount 235, discardCount 462
+      player 3: handCount 494, deckCount 236, discardCount 366
+   playedCardCount 64
+   current player: 2
+   coins: 83
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 281, actual 280
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 441, actual 442
+   numPlayers: 2
+      player 0: handCount 100, deckCount 123, discardCount 454
+      player 1: handCount 279, deckCount 444, discardCount 126
+   playedCardCount 66
+   current player: 1
+   coins: 74
+
+unittest1.c:
+Testing function: feastCardEffect
+TestGainCardWorthMaxFiveGold
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 4, actual 5
+
+unittest2.c:
+Testing function: seaHagCardEffect
+TestNoOtherPlayers
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 4, actual 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+TestNoCurseCardsLeft
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 4, actual 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Other player's deck count expected 9, actual 7
+TestOtherPlayerDeckIsEmpty
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 4, actual 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 10, actual -3
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 1, actual 11
+
+unittest3.c:
+Testing function: adventurerCardEffect
+TestDeckEmpty
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 6, actual 8
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Discard count expected 1, actual 0
+ヽ(°ロ°)ﾉ ASSERT FAILED: Coins expected 6, actual 4
+TestDeckAndDiscardEmpty
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 4, actual 5
+ヽ(°ロ°)ﾉ ASSERT FAILED: Played cards count expected 1, actual 0
+
+unittest4.c:
+Testing function: smithyCardEffect
+TestThreeCardsAdded
+ヽ(°ロ°)ﾉ ASSERT FAILED: Hand count expected 7, actual 6
+ヽ(°ロ°)ﾉ ASSERT FAILED: Deck count expected 2, actual 3
+
+gcov dominion.c:
+Function 'updateCoins'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 1
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+Branches executed:100.00% of 6
+Taken at least once:83.33% of 6
+No calls
+
+Function 'cardEffect'
+Lines executed:16.36% of 214
+Branches executed:18.34% of 169
+Taken at least once:9.47% of 169
+Calls executed:20.00% of 55
+
+Function 'playCouncilRoom'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'playGreatHall'
+Lines executed:0.00% of 5
+No branches
+Calls executed:0.00% of 2
+
+Function 'playFeast'
+Lines executed:68.75% of 16
+Branches executed:60.00% of 10
+Taken at least once:50.00% of 10
+Calls executed:20.00% of 5
+
+Function 'playAdventurer'
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
+
+Function 'playSmithy'
+Lines executed:100.00% of 5
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 2
+
+Function 'getCost'
+Lines executed:7.02% of 57
+Branches executed:100.00% of 28
+Taken at least once:3.57% of 28
+No calls
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+Calls executed:0.00% of 2
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 42
+Taken at least once:0.00% of 42
+Calls executed:0.00% of 3
+
+Function 'isGameOver'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 8
+Taken at least once:0.00% of 8
+No calls
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:0.00% of 3
+No branches
+Calls executed:0.00% of 1
+
+Function 'numHandCards'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 1
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 4
+
+Function 'playCard'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 3
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+Calls executed:100.00% of 2
+
+Function 'initializeGame'
+Lines executed:82.26% of 62
+Branches executed:91.30% of 46
+Taken at least once:76.09% of 46
+Calls executed:100.00% of 5
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+No branches
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function 'compare'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+
+File 'dominion.c'
+Lines executed:31.74% of 605
+Branches executed:36.69% of 417
+Taken at least once:24.46% of 417
+Calls executed:25.26% of 95
+Creating 'dominion.c.gcov'
+

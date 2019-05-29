@@ -123,7 +123,13 @@ void TestDeckAndDiscardEmpty(int* didTestPass) {
   const int cardsPlayed = 1;
 
   // Run dominion code, saving results in |state|.
-  adventurerCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   // Nothing should have changed, except for the Adventurer card itself being
   // played.
