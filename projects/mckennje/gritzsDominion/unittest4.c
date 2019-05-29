@@ -38,7 +38,13 @@ void TestThreeCardsAdded(int* didTestPass) {
   const int cardsPlayed = 1;
 
   // Run dominion code, saving results in |state|.
-  smithyCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   // Check expectations against actual results.
   const int currentPlayer = whoseTurn(&initialState);

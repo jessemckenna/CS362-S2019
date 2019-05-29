@@ -42,7 +42,13 @@ void TestNoOtherPlayers(int* didTestPass) {
   const int cardsPlayed = 1;
 
   // Run dominion code, saving results in |state|.
-  seaHagCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   // Nothing should have changed, except the Sea Hag card itself was played.
   const int currentPlayer = whoseTurn(&initialState);

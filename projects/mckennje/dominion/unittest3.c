@@ -49,7 +49,13 @@ void TestDeckEmpty(int* didTestPass) {
   const int cardsShuffled = initialState.discardCount[currentPlayer];
 
   // Run dominion code, saving results in |state|.
-  adventurerCardEffect(&state, inputs.handPos);
+  cardEffect(TESTCARD,
+             inputs.choice1,
+             inputs.choice2,
+             inputs.choice3,
+             &state,
+             inputs.handPos,
+             &inputs.bonus);
 
   // Check expectations against actual results.
   ExpectEquals("Hand count",
