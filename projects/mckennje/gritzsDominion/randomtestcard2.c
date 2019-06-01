@@ -15,7 +15,7 @@
 
 #define TESTCARDNAME "Smithy"
 #define TESTCARD smithy
-#define NUM_TEST_RUNS 100
+#define NUM_TEST_RUNS 3
 
 int TestRandomized();
 

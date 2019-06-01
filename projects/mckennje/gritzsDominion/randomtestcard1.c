@@ -15,7 +15,7 @@
 
 #define TESTCARDNAME "Village"
 #define TESTCARD village
-#define NUM_TEST_RUNS 100
+#define NUM_TEST_RUNS 3
 #define MAX_NUM_ACTIONS 20
 
 int TestRandomized();

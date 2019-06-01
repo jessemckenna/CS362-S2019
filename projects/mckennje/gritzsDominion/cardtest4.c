@@ -165,14 +165,21 @@ void FindNoTreasures(int* didTestPass) {
 
   struct gameState initialState = GetInitialState();
   struct gameInputs inputs = InitializeGameInputs(initialState, TESTCARD);
-  struct gameState state = initialState;
 
   // Remove all Treasure cards from deck.
   const int currentPlayer = whoseTurn(&initialState);
-  const int deckCount = state.deckCount[currentPlayer];
+  const int deckCount = initialState.deckCount[currentPlayer];
   for (int i = 0; i < deckCount; i++) {
-    if (IsTreasure(state.deck[currentPlayer][i])) {
-      state.deck[currentPlayer][i] = -1;
+    if (IsTreasure(initialState.deck[currentPlayer][i])) {
+      initialState.deck[currentPlayer][i] = -1;
+    }
+  }
+
+  // Remove all Treasure cards from hand.
+  const int handCount = initialState.handCount[currentPlayer];
+  for (int i = 0; i < handCount; i++) {
+    if (IsTreasure(initialState.hand[currentPlayer][i])) {
+      initialState.hand[currentPlayer][i] = -1;
     }
   }
 
@@ -181,6 +188,7 @@ void FindNoTreasures(int* didTestPass) {
   const int cardsPlayed = 1;
 
   // Run dominion code, saving results in |state|.
+  struct gameState state = initialState;
   cardEffect(TESTCARD,
              inputs.choice1,
              inputs.choice2,
