@@ -55,9 +55,9 @@ public class UrlValidatorTest extends TestCase {
 						// If all components are valid, expect URL is valid;
 						// if any component is invalid, expect URL is invalid.
 						expect = testUrlScheme[i].valid
-									&& testUrlAuth[i].valid
-									&& testUrlPath[i].valid
-									&& testUrlQuery[i].valid;
+									&& testUrlAuth[j].valid
+									&& testUrlPath[k].valid
+									&& testUrlQuery[l].valid;
 						result = urlVal.isValid(url);
 						assertEquals(url, expect, result);
 					}
