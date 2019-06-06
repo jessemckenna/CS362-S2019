@@ -47,28 +47,19 @@ public class UrlValidatorTest extends TestCase {
 			for (int j = 0; j < testUrlAuth.length; j++) {
 				for (int k = 0; k < testUrlPath.length; k++) {
 					for (int l = 0; l < testUrlQuery.length; l++) {
-						url = testUrlScheme[i].item + testUrlAuth[j].item + testUrlPath[k].item + testUrlQuery[l].item;		
+						url = testUrlScheme[i].item
+								+ testUrlAuth[j].item
+								+ testUrlPath[k].item
+								+ testUrlQuery[l].item;
 						
-						//Scheme test
-						expect = testUrlScheme[i].valid;
+						// If all components are valid, expect URL is valid;
+						// if any component is invalid, expect URL is invalid.
+						expect = testUrlScheme[i].valid
+									&& testUrlAuth[i].valid
+									&& testUrlPath[i].valid
+									&& testUrlQuery[i].valid;
 						result = urlVal.isValid(url);
 						assertEquals(url, expect, result);
-						
-						//Authority test
-						expect = testUrlAuth[i].valid;
-						result = urlVal.isValid(url);
-						assertEquals(url, expect, result);
-						
-						//Path test
-						expect = testUrlPath[i].valid;
-						result = urlVal.isValid(url);
-						assertEquals(url, expect, result);
-						
-						//Query test
-						expect = testUrlQuery[i].valid;
-						result = urlVal.isValid(url);
-						assertEquals(url, expect, result);
-						
 					}
 				}
 			}
