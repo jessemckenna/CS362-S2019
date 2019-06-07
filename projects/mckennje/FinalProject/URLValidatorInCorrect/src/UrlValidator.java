@@ -269,14 +269,14 @@ public class UrlValidator implements Serializable {
     public UrlValidator(String[] schemes, RegexValidator authorityValidator, long options) {
         this.options = options;
 
+        if (schemes == null) {
+            schemes = DEFAULT_SCHEMES;
+        }
+
         if (isOn(ALLOW_ALL_SCHEMES)) {
         	allowedSchemes = new HashSet<String>(0);
         	allowedSchemes.add(schemes[0].toLowerCase(Locale.ENGLISH));
         } else {
-            if (schemes == null) {
-                schemes = DEFAULT_SCHEMES;
-            }
-            
             allowedSchemes = new HashSet<String>(0);
             
             for(int i=0; i < schemes.length; i++) {
