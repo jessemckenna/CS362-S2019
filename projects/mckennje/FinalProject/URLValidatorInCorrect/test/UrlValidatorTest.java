@@ -41,7 +41,7 @@ public class UrlValidatorTest extends TestCase {
 		boolean result = false;
 		
 		UrlValidator urlVal = new UrlValidator();
-		
+
 		//Loops to create all possible test urls
 		for (int i = 0; i < testUrlScheme.length; i++) {
 			for (int j = 0; j < testUrlAuth.length; j++) {
@@ -51,7 +51,7 @@ public class UrlValidatorTest extends TestCase {
 								+ testUrlAuth[j].item
 								+ testUrlPath[k].item
 								+ testUrlQuery[l].item;
-						
+
 						// If all components are valid, expect URL is valid;
 						// if any component is invalid, expect URL is invalid.
 						expect = testUrlScheme[i].valid
@@ -63,7 +63,7 @@ public class UrlValidatorTest extends TestCase {
 					}
 				}
 			}
-		}	
+		}
 	}
 
 	//////////////////////////////////
@@ -89,7 +89,10 @@ public class UrlValidatorTest extends TestCase {
 								new ResultPair("255.255.255.255", true),
 								new ResultPair(".0.0.0.0", false),
 								new ResultPair("256.256.256.256", false),
-								new ResultPair("test.au", true)};
+								new ResultPair("test.au", true),
+								new ResultPair("www.google.com:80", true),
+								new ResultPair("www.google.com:65535", true),
+								new ResultPair("www.google.com:65536", false)};
 	
 	ResultPair[] testUrlPath = {new ResultPair("/test", true),
 								new ResultPair("/test1", true),
@@ -99,12 +102,8 @@ public class UrlValidatorTest extends TestCase {
 								new ResultPair("/test123", true),
 								new ResultPair("/..", false),
 								new ResultPair("/test/", true),
-								new ResultPair("/**", false),
 								new ResultPair("/test//", false),
-								new ResultPair("/test//test", true),
-								new ResultPair("/test:80", true),
-								new ResultPair("/test:65535", true),
-								new ResultPair("/test:65536", false)};
+								new ResultPair("/test//test", false)};
 	
 	ResultPair[] testUrlQuery = {new ResultPair("?action=view", true),
 								new ResultPair("?action=edit&mode=up", true),
