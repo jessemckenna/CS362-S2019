@@ -15,6 +15,10 @@
  * limitations under the License.
  */
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import junit.framework.TestCase;
 
 /**
@@ -91,17 +95,14 @@ protected void setUp() {
       do {
           StringBuilder testBuffer = new StringBuilder();
          boolean expected = true;
-         
-         for (int testPartsIndexIndex = 0; testPartsIndexIndex < 0; ++testPartsIndexIndex) {
+         for (int testPartsIndexIndex = 0; testPartsIndexIndex < testPartsIndex.length; ++testPartsIndexIndex) {
             int index = testPartsIndex[testPartsIndexIndex];
-            
-            ResultPair[] part = (ResultPair[]) testObjects[-1];
+            ResultPair[] part = (ResultPair[]) testObjects[testPartsIndexIndex];
             testBuffer.append(part[index].item);
             expected &= part[index].valid;
          }
          String url = testBuffer.toString();
-         
-         boolean result = !urlVal.isValid(url);
+         boolean result = urlVal.isValid(url);
          assertEquals(url, expected, result);
          if (printStatus) {
             if (printIndex) {
@@ -334,14 +335,13 @@ protected void setUp() {
     static boolean incrementTestPartsIndex(int[] testPartsIndex, Object[] testParts) {
       boolean carry = true;  //add 1 to lowest order part.
       boolean maxIndex = true;
-      for (int testPartsIndexIndex = testPartsIndex.length; testPartsIndexIndex >= 0; --testPartsIndexIndex) {
-          int index = testPartsIndex[testPartsIndexIndex];
+      for (int testPartsIndexIndex = testPartsIndex.length - 1; testPartsIndexIndex >= 0; --testPartsIndexIndex) {
+         int index = testPartsIndex[testPartsIndexIndex];
          ResultPair[] part = (ResultPair[]) testParts[testPartsIndexIndex];
          maxIndex &= (index == (part.length - 1));
-         
          if (carry) {
             if (index < part.length - 1) {
-            	index--;
+               index++;
                testPartsIndex[testPartsIndexIndex] = index;
                carry = false;
             } else {
@@ -350,7 +350,8 @@ protected void setUp() {
             }
          }
       }
-      
+
+
       return (!maxIndex);
    }
 
@@ -587,7 +588,7 @@ protected void setUp() {
 
    //---------------- Test data for individual url parts ----------------
    private final String[] schemes = {"http", "gopher", "g0-To+.",
-                                      "not_valid" // TODO this will need to be dropped if the ctor validates schemes
+                                      "not_valid" 
                                     };
 
    ResultPair[] testScheme = {new ResultPair("http", true),
@@ -595,9 +596,164 @@ protected void setUp() {
                             new ResultPair("httpd", false),
                             new ResultPair("gopher", true),
                             new ResultPair("g0-to+.", true),
-                            new ResultPair("not_valid", false), // underscore not allowed
+                            new ResultPair("not_valid", false), 
                             new ResultPair("HtTp", true),
                             new ResultPair("telnet", false)};
+
+
+
+//================= RANDOM TEST ================================================
+//==============================================================================
+   
+   private static int getRandomNumberInRange(int min, int max) {
+
+		if (min >= max) {
+			throw new IllegalArgumentException("max must be greater than min");
+		}
+
+		Random r = new Random();
+		return r.nextInt((max - min) + 1) + min;
+	}
+   
+   private static List<String> generateUrls(String[] schemes, String[] authorities, String[] ports, String[] paths, String[] queries) {
+	   List<String> output = new ArrayList<String>();
+	   for (int i = 0; i < getRandomNumberInRange(1, schemes.length); i++) {
+		   String scheme = schemes[getRandomNumberInRange(0,schemes.length-1)];
+		   
+		   for (int j = 0; j < getRandomNumberInRange(1, authorities.length); j++) {
+			   String authority = authorities[getRandomNumberInRange(0,authorities.length-1)];
+			   
+			   for (int k = 0; k < getRandomNumberInRange(1, ports.length); k++) {
+				   String port = ports[getRandomNumberInRange(0,ports.length-1)];
+				   
+				   for (int a = 0; a < getRandomNumberInRange(1, paths.length); a++) {
+					   String path = paths[getRandomNumberInRange(0,paths.length-1)];
+					   
+					   for (int b = 0; b < getRandomNumberInRange(1, queries.length); b++) {
+						   String query = queries[getRandomNumberInRange(0,queries.length-1)];
+						   
+						   output.add(scheme+authority+port+path+query);
+					   }
+				   }
+			   }
+		   }
+	   }
+	   return output;
+   }
+   
+   public void testValidatorRandom() {
+	   UrlValidator urlValidator = new UrlValidator();
+	   // validSchemes x validAuthorities x validPorts x validPaths x validQueries
+
+	   // assert true from valid paths
+	   List<String> validUrls = generateUrls(validSchemes,validAuthorities,validPorts,validPaths,validQueries);
+	   for (String url: validUrls) {
+	       assertTrue(urlValidator.isValid(url));
+	   }
+      // assert invalid
+	   List<String> invalidUrls = generateUrls(invalidSchemes,invalidAuthorities,invalidPorts,invalidPaths,invalidQueries);
+	   for (String url: invalidUrls) {
+	       assertFalse(urlValidator.isValid(url));
+	   }
+	   
+   }
+
+   final static String[] validSchemes = {
+	   "",
+	   "http://",
+       "https://",
+       "ftp://"
+   };
+
+   final static String[] validAuthorities = {
+	   "localhost",
+	   "www.google.com",
+	   "facebook.com",
+	   "house.of.bounce.com",
+	   "new.co",
+	   "alvocado.cn",
+	   "blah-blah.cv",
+	   "192.168.0.1",
+	   "127.0.0.1",
+	   "0.0.0.0",
+	   "255.255.255.255",
+	   "54.45.54.45"
+   };
+   
+   final static String[] validPorts = {
+	   "",
+	   ":90",
+	   ":11",
+	   ":4545",
+	   ":1022",
+	   ":3",
+	   ":2000",
+	   ":888"
+   };
+   
+   final static String[] validPaths = {
+	   "",
+       "/",
+       "/src/UrlValidatorTest.java",
+       "/src/word",
+       "/index.html",
+       "/t/p/m",
+       "/9383jllasjdd",
+       "/lol/lol.mp3"
+   };
+   
+   final static String[] validQueries = {
+	   "?user=test_name",
+	   "?a=1&b=2&c=3",
+	   "?"
+   };
+   
+   final static String[] invalidSchemes = {
+	   "s://p://",
+       "/",
+       "http:",
+       "ftp",
+       "https:/",
+       "http:\\\\"
+   };
+   
+   final static String[] invalidAuthorities = {
+	   "hello..com",
+       "is.this%in.valid",
+       "",
+       ".org",
+       "moogle.com.",
+       "1.2",
+       "256.1.1.1",
+       "-1.0.0.1",
+       "0.-1.0.0",
+       ".1.1.1.5",
+       "1.1.1.5.",
+       "50.49.48.47.46",
+       "66-66-66-66",
+       "meepmeeep",
+       "afk.lscd"
+   };
+   
+   final static String[] invalidPorts = {
+	   ":80000",
+	   ":65000",
+	   ":-1",
+	   ":1113"
+   };
+   
+   final static String[] invalidPaths = {
+	   "/el?ts",
+	   "%lk%k",
+	   "{path}/{path2}",
+	   "/pme^lkds/asld"
+   };
+   
+   final static String[] invalidQueries = {
+	   "&id=928203&&",								
+	   "bleep=bleep_bleep",							
+	   "?user=test_user?password=test_password"
+   };
 
 
 }
