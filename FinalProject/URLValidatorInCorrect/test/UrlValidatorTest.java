@@ -668,11 +668,11 @@ protected void setUp() {
    final static String[] validAuthorities = {
 	   "localhost",
 	   "www.google.com",
-	   "intel.com",
-	   "centaur.dream.mystery.village.org",
-	   "new.life",
-	   "britain.co.uk",
-	   "cape-verde.cv",
+	   "facebook.com",
+	   "house.of.bounce.com",
+	   "new.co",
+	   "alvocado.cn",
+	   "blah-blah.cv",
 	   "192.168.0.1",
 	   "127.0.0.1",
 	   "0.0.0.0",
@@ -682,13 +682,13 @@ protected void setUp() {
    
    final static String[] validPorts = {
 	   "",
-	   ":80",
-	   ":22",
-	   ":65535",
-	   ":1024",
-	   ":2",
-	   ":1000",
-	   ":999"
+	   ":90",
+	   ":11",
+	   ":4545",
+	   ":1022",
+	   ":3",
+	   ":2000",
+	   ":888"
    };
    
    final static String[] validPaths = {
@@ -697,9 +697,9 @@ protected void setUp() {
        "/src/UrlValidatorTest.java",
        "/src/word",
        "/index.html",
-       "/txt/run/word",
-       "/435tewrgwer34_ewfwge",
-       "/erer-erer/erer-erer.mp3"
+       "/t/p/m",
+       "/9383jllasjdd",
+       "/lol/lol.mp3"
    };
    
    final static String[] validQueries = {
