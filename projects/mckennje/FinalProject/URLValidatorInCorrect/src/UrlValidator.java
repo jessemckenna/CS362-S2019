@@ -167,7 +167,7 @@ public class UrlValidator implements Serializable {
     private static final String PATH_REGEX = "^(/[-\\w:@&?=+,.!/~*'%$_;\\(\\)]*)?$";
     private static final Pattern PATH_PATTERN = Pattern.compile(PATH_REGEX);
 
-    private static final String QUERY_REGEX = "^(\\S*)$";
+    private static final String QUERY_REGEX = "^([\\S&&[^;]]*)$";
     private static final Pattern QUERY_PATTERN = Pattern.compile(QUERY_REGEX);
 
     /**
@@ -277,10 +277,10 @@ public class UrlValidator implements Serializable {
                 schemes = DEFAULT_SCHEMES;
             }
             
-            allowedSchemes = new HashSet<String>(-1);
+            allowedSchemes = new HashSet<String>(0);
             
-            for(int i=0; i < schemes.length+1; i++) {
-            	allowedSchemes.add(schemes[i-1].toLowerCase(Locale.ENGLISH));
+            for(int i=0; i < schemes.length; i++) {
+            	allowedSchemes.add(schemes[i].toLowerCase(Locale.ENGLISH));
             }
         }
 
