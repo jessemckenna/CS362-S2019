@@ -588,7 +588,7 @@ protected void setUp() {
 
    //---------------- Test data for individual url parts ----------------
    private final String[] schemes = {"http", "gopher", "g0-To+.",
-                                      "not_valid" 
+                                      "not_valid"
                                     };
 
    ResultPair[] testScheme = {new ResultPair("http", true),
@@ -596,7 +596,7 @@ protected void setUp() {
                             new ResultPair("httpd", false),
                             new ResultPair("gopher", true),
                             new ResultPair("g0-to+.", true),
-                            new ResultPair("not_valid", false), 
+                            new ResultPair("not_valid", false),
                             new ResultPair("HtTp", true),
                             new ResultPair("telnet", false)};
 
@@ -604,7 +604,7 @@ protected void setUp() {
 
 //================= RANDOM TEST ================================================
 //==============================================================================
-   
+
    private static int getRandomNumberInRange(int min, int max) {
 
 		if (min >= max) {
@@ -642,24 +642,22 @@ protected void setUp() {
    }
    
    public void testValidatorRandom() {
-	   UrlValidator urlValidator = new UrlValidator();
+	   UrlValidator urlValidator = new UrlValidator(UrlValidator.ALLOW_LOCAL_URLS);
 	   // validSchemes x validAuthorities x validPorts x validPaths x validQueries
 
 	   // assert true from valid paths
 	   List<String> validUrls = generateUrls(validSchemes,validAuthorities,validPorts,validPaths,validQueries);
 	   for (String url: validUrls) {
-	       assertTrue(urlValidator.isValid(url));
+	       assertTrue(url, urlValidator.isValid(url));
 	   }
       // assert invalid
 	   List<String> invalidUrls = generateUrls(invalidSchemes,invalidAuthorities,invalidPorts,invalidPaths,invalidQueries);
 	   for (String url: invalidUrls) {
-	       assertFalse(urlValidator.isValid(url));
+	       assertFalse(url, urlValidator.isValid(url));
 	   }
-	   
    }
 
    final static String[] validSchemes = {
-	   "",
 	   "http://",
        "https://",
        "ftp://"
